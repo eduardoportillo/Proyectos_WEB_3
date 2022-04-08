@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Materia</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
+        form {
+            padding: 60px;
+            max-width: 400px;
+            background-color: #E7E7E7;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            color: #525c66;
+            font-size: 1em;
+            resize: none;
+        }
+
+        form button {
+            display: block;
+            background-color: #0095eb;
+            padding: 10px 45px 10px 45px;
+            border: 0;
+            font-size: 1em;
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="{% url 'entidades:ofertamateria.create' %}">
+    {% csrf_token %}
+    <div>
+        <label for="horario">Horario:</label>
+        <input id="horario" type="text" name="horario"/>
+    </div>
+    <div>
+        <label for="docente_id">Docente:</label>
+        <br>
+        <select name="docente_id">
+            {% for docente in docente_list %}
+                <option value="{{ docente.id }}">{{ docente.nombres }}  {{ docente.apellidos }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="materia_id">Materia:</label>
+        <br>
+        <select name="materia_id">
+            {% for materia in materia_list %}
+                <option value="{{ materia.id }}">{{ materia.nombres }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+
+    <div>
+        <input type="submit" value="Guardar"/>
+    </div>
+</form>
+</body>
+</html>

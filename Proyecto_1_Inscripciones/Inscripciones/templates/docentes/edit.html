@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Docente</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
+        form {
+            padding: 60px;
+            max-width: 400px;
+            background-color: #E7E7E7;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            margin-bottom: 15px;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            color: #525c66;
+            font-size: 1em;
+            resize: none;
+        }
+
+        form button {
+            display: block;
+            background-color: #0095eb;
+            padding: 10px 45px 10px 45px;
+            border: 0;
+            font-size: 1em;
+            color: white;
+            font-family: "Roboto", sans-serif;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="{% url 'entidades:docente.edit' docente.id %}">
+    {% csrf_token %}
+    <div>
+        <label for="nombres">Nombres:</label>
+        <input id="nombres" type="text" value="{{ docente.nombres }}" name="nombres"/>
+    </div>
+    <div>
+        <label for="apellidos">Apellidos:</label>
+        <input id="apellidos" type="text" name="apellidos" value="{{ docente.apellidos }}"/>
+    </div>
+    <div>
+        <label for="ci">Carnet de Identidad:</label>
+        <input id="ci" type="number" name="ci" value="{{ docente.ci }}"/>
+    </div>
+    <div>
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+            <option value="1" {% if docente.genero == 1 %}selected{% endif %}>Masculino</option>
+            <option value="0" {% if docente.genero == 0 %}selected{% endif %}>Indefinido</option>
+            <option value="-1" {% if docente.genero == -1 %}selected{% endif %}>Femenino</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Guardar"/>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Materia</title>
+    <style>
+        body {
+            background-color: #632432;
+            font-family: Arial;
+        }
+
+        #main-container {
+            margin: 150px auto;
+            width: 600px;
+        }
+
+        table {
+            background-color: white;
+            text-align: left;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 20px;
+        }
+
+        thead {
+            background-color: #246355;
+            border-bottom: solid 5px #0F362D;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ddd;
+        }
+
+        tr:hover td {
+            background-color: #369681;
+            color: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #btn-mas {
+            display: none;
+        }
+
+        .container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .redes a, .btn-mas label {
+            display: block;
+            text-decoration: none;
+            background: #cc2b2b;
+            color: #fff;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+            transition: all 500ms ease;
+        }
+
+        .redes a:hover {
+            background: #fff;
+            color: #cc2b2b;
+        }
+
+        .redes a {
+            margin-bottom: -15px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #btn-mas:checked ~ .redes a {
+            margin-bottom: 10px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-mas label {
+            cursor: pointer;
+            background: #f44141;
+            font-size: 23px;
+        }
+
+        #btn-mas:checked ~ .btn-mas label {
+            transform: rotate(135deg);
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" id="btn-mas">
+    <div class="redes">
+        <a href="{% url 'entidades:materia.create'%}" class="fa fa-facebook">+</a>
+    </div>
+    <div class="btn-mas">
+        <label for="btn-mas" class="fa fa-plus"></label>
+    </div>
+</div>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Semestre</th>
+        <th>Carrera</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </tr>
+    <tbody>
+
+    {% for materia in materia_list %}
+        <tr>
+            <td>{{ materia.pk }}</td>
+            <td>{{ materia.nombres }}</td>
+            <td>{{ materia.semestre }}</td>
+            <td>{{ materia.carrera }}</td>
+
+            <td>
+                <a href="{% url 'entidades:materia.edit' materia.pk %}">Editar</a>
+            </td>
+            <td>
+                <a onclick="return confirm('Está seguro que desea eliminar?')"
+                        href="{% url 'entidades:materia.delete' materia.pk %}">Eliminar
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
