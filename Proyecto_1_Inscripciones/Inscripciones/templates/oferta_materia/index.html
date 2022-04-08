@@ -98,13 +98,49 @@
             font-size: 25px;
         }
 
+        {#TODO CSS navBar#}
+
+        .header_ul {
+            float: left;
+            list-style: none;
+        }
+
+        .header_ul li {
+            margin-top: 26px;
+            margin-left: 5px;
+            float: left;
+        }
+
+        .header_ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            background-color: black;
+            padding: 5px;
+        }
+
+        .header_ul a:hover {
+            color: red;
+        }
+
     </style>
 </head>
 <body>
+{#TODO ver como hacer para cargar componentes html para no repetir codigo#}
+<nav>
+    <ul class="header_ul">
+        <li class="header_ul_home"><a href="{% url 'entidades:alumno.index' %}">Alumnos</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:docente.index' %}">Docente</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:materia.index' %}">Materias</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:inscripciones.index' %}">Inscripciones</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:ofertamateria.index' %}">Materias Ofertadas</a></li>
+    </ul>
+</nav>
+{#TODO aca terminina la barra de navegación#}
 <div class="container">
     <input type="checkbox" id="btn-mas">
     <div class="redes">
-        <a href="{% url 'entidades:ofertamateria.create'%}" class="fa fa-facebook">+</a>
+        <a href="{% url 'entidades:ofertamateria.create' %}" class="fa fa-facebook">+</a>
     </div>
     <div class="btn-mas">
         <label for="btn-mas" class="fa fa-plus"></label>
@@ -114,7 +150,7 @@
     <tr>
         <th>id</th>
         <th>Horario</th>
-        <th>ofertamateria</th>
+        <th>Docente</th>
         <th>Materia</th>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -125,14 +161,14 @@
         <tr>
             <td>{{ ofertamateria.pk }}</td>
             <td>{{ ofertamateria.horario }}</td>
-            <td>{{ ofertamateria.docente_id }}</td> {# TODO cruzar info con la de docente #}
-            <td>{{ ofertamateria.materia_id }}</td> {# TODO cruzar info con la de materia #}
+            <td>{{ ofertamateria.docente.nombres }} {{ ofertamateria.docente.apellidos }}</td>
+            <td>{{ ofertamateria.materia.nombres }}</td>
             <td>
                 <a href="{% url 'entidades:ofertamateria.edit' ofertamateria.pk %}">Editar</a>
             </td>
             <td>
                 <a onclick="return confirm('Está seguro que desea eliminar?')"
-                        href="{% url 'entidades:ofertamateria.delete' ofertamateria.pk %}">Eliminar
+                   href="{% url 'entidades:ofertamateria.delete' ofertamateria.pk %}">Eliminar
                 </a>
             </td>
         </tr>

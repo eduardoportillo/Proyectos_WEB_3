@@ -1,7 +1,7 @@
 from django.urls import path
 
 from entidades.models import oferta_materia
-from entidades.views import alumno_views, materia_views, oferta_materia_views
+from entidades.views import alumno_views, materia_views, oferta_materia_views, inscripciones_views
 from entidades.views import docente_views
 
 app_name = 'entidades'
@@ -30,4 +30,10 @@ urlpatterns = [
     path('ofertamaterias/create', oferta_materia_views.create, name="ofertamateria.create"),
     path('ofertamaterias/<int:ofertamateria_id>/edit', oferta_materia_views.edit, name="ofertamateria.edit"),
     path('ofertamaterias/<int:ofertamateria_id>/delete', oferta_materia_views.delete, name="ofertamateria.delete"),
+
+    # Inscripciones
+    path('inscripciones', inscripciones_views.index, name="inscripciones.index"),
+    path('inscripciones/<int:alumno_id>/create', inscripciones_views.create, name="inscripciones.create"),
+    path('inscripciones/<int:inscripcion_id>/edit', inscripciones_views.edit, name="inscripciones.edit"),
+    path('inscripciones/<int:inscripcion_id>/delete', inscripciones_views.delete, name="inscripciones.delete"),
 ]

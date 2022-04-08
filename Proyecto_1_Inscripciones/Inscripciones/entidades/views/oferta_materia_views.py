@@ -14,10 +14,11 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+
 def create(request):
+    docente_list = Docente.objects.all()
+    materia_list = Materia.objects.all()
     if request.method == 'GET':
-        docente_list = Docente.objects.all()
-        materia_list = Materia.objects.all()
 
         template = loader.get_template('oferta_materia/form.html')
 
@@ -37,16 +38,24 @@ def create(request):
 
 
 def edit(request, ofertamateria_id):
+    docente_list = Docente.objects.all()
+    materia_list = Materia.objects.all()
     ofertamateria = get_object_or_404(OfertaMateria, pk=ofertamateria_id)
     if request.method == 'GET':
-        return render(request, 'oferta_materia/edit.html', {'ofertamateria': ofertamateria})
+        context = {
+            'ofertamateria': ofertamateria,
+            'docente_list': docente_list,
+            'materia_list': materia_list
+        }
+        return render(request, 'oferta_materia/edit.html', context)
+
     else:
         ofertamateria.horario = request.POST['horario']
         ofertamateria.docente_id = request.POST['docente_id']
         ofertamateria.materia_id = request.POST['materia_id']
-        ofertamateria.genero = request.POST['genero']
         ofertamateria.save()
         return redirect(reverse('entidades:ofertamateria.index'))
+
 
 def delete(request, ofertamateria_id):
     ofertamateria = get_object_or_404(OfertaMateria, pk=ofertamateria_id)

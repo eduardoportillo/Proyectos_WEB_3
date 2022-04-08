@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alumnos</title>
+    <title>Inscripcion</title>
     <style>
         body {
             background-color: #632432;
@@ -123,62 +123,41 @@
             color: red;
         }
 
-
     </style>
 </head>
 <body>
 {#TODO ver como hacer para cargar componentes html para no repetir codigo#}
 <nav>
     <ul class="header_ul">
-        <li class="header_ul_home"><a href="{% url 'entidades:alumno.index'%}">Alumnos</a></li>
-        <li class="header_ul_home"><a href="{% url 'entidades:docente.index'%}">Docente</a></li>
-        <li class="header_ul_home"><a href="{% url 'entidades:materia.index'%}">Materias</a></li>
-        <li class="header_ul_home"><a href="{% url 'entidades:inscripciones.index'%}">Inscripciones</a></li>
-        <li class="header_ul_home"><a href="{% url 'entidades:ofertamateria.index'%}">Materias Ofertadas</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:alumno.index' %}">Alumnos</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:docente.index' %}">Docente</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:materia.index' %}">Materias</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:inscripciones.index' %}">Inscripciones</a></li>
+        <li class="header_ul_home"><a href="{% url 'entidades:ofertamateria.index' %}">Materias Ofertadas</a></li>
     </ul>
 </nav>
 {#TODO aca terminina la barra de navegación#}
-
-<div class="container">
-    <input type="checkbox" id="btn-mas">
-    <div class="redes">
-        <a href="{% url 'entidades:alumno.create' %}" class="fa fa-facebook">+</a>
-    </div>
-    <div class="btn-mas">
-        <label for="btn-mas" class="fa fa-plus"></label>
-    </div>
-</div>
 <table>
     <tr>
         <th>id</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>registro</th>
-        <th>semestre</th>
-        <th>CI</th>
-        <th>Registrar Materia</th>
+        <th>Alumno</th>
+        <th>Materias Inscrita</th>
         <th>Editar</th>
         <th>Eliminar</th>
     </tr>
     <tbody>
 
-    {% for alumno in alumno_list %}
+    {% for inscripcion in inscripcion_list %}
         <tr>
-            <td>{{ alumno.pk }}</td>
-            <td>{{ alumno.nombres }}</td>
-            <td>{{ alumno.apellidos }}</td>
-            <td>{{ alumno.registro }}</td>
-            <td>{{ alumno.semestre }}</td>
-            <td>{{ alumno.ci }}</td>
+            <td>{{ inscripcion.pk }}</td>
+            <td>{{ inscripcion.alumno.nombres }} {{ inscripcion.alumno.apellidos }}</td>
+            <td>{{ inscripcion.oferta_materia.materia.nombres }}</td>
             <td>
-                <a href="{% url 'entidades:inscripciones.create' alumno.pk %}">Registrar Materia</a>
-            </td>
-            <td>
-                <a href="{% url 'entidades:alumno.edit' alumno.pk %}">Editar</a>
+                <a href="{% url 'entidades:inscripciones.edit' inscripcion.pk %}">Editar</a>
             </td>
             <td>
                 <a onclick="return confirm('Está seguro que desea eliminar?')"
-                   href="{% url 'entidades:alumno.delete' alumno.pk %}">Eliminar
+                   href="{% url 'entidades:inscripciones.delete' inscripcion.pk %}">Eliminar
                 </a>
             </td>
         </tr>
