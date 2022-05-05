@@ -32,7 +32,7 @@
                         <td>{{ reunion.fecha_hora_creacion | naturaltime }}</td>
                         <td>{{ reunion.users }}</td>
                         <td>{{ reunion.user_owner.username }}</td>
-                        <td><a href="{# {% url ' reunion.edit' reunion.pk %} TODO terminar Editar #}">Editar</a></td>
+                        <td><a href="{% url 'reunion.edit' reunion.pk %}">Editar</a></td>
                         <td>
                             <a onclick="return confirm('Está seguro que desea eliminar el usuario?')"
                                href="{% url 'reunion.delete' reunion.pk %}">Eliminar</a>

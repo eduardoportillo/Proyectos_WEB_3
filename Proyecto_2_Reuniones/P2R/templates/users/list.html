@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <title>Users</title>
 
-    {#    {% load static %}#}
-    {#    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">#}
-    {#    <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>#}
-    {#    TODO Implementar archivos estaticos  #}
+        {% load static %}
+        <link rel="stylesheet" href="{% static "style.css" %}">
 
 </head>
 <body>
+<nav>
+    <ul class="header_ul">
+        <li class="header_ul_home"><a href="{% url 'user.list' %}">Mis Reuniones</a></li>
+        <li class="header_ul_home"><a href="{% url 'user.list' %}">Proximas Reuniones</a></li>
+        <li class="header_ul_home"><a href="{% url 'user.login' %}">Log In</a></li>
+        <li class="header_ul_home"><a href="{% url 'user.register' %}">Sing Up</a></li>
+        <li>______________________________________________________________________</li>
+        <li class="header_ul_home"><a href="{% url 'user.logout' %}">Log Out</a></li>
+    </ul>
+</nav>
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -23,6 +32,8 @@
                     <th>Password</th>
                     <th>Es Staff</th>
                     <th>Es Super Usuario</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
                 </thead>
                 <tbody>

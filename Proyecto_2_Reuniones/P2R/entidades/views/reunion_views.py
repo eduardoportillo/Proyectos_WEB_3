@@ -20,11 +20,12 @@ class ReunionCreateView(CreateView):
 
 class ReunionUpdateView(UpdateView):
     model = Reunion
+    form_class = ReunionForm
     template_name = "reuniones/form.html"
-    fields = ['id', 'marca_modelo', 'tipo', 'persona']
-    success_url = '/personas/vehiculos/'
+    success_url = reverse_lazy('reunion.list')
+
 
 def delete(request, reunion_id):
-    persona = get_object_or_404(Reunion, pk=reunion_id)
-    persona.delete()
-    return redirect(reverse('reunion.list'))
+    reunion = get_object_or_404(Reunion, pk=reunion_id)
+    reunion.delete()
+    return redirect(reverse_lazy('reunion.list'))
