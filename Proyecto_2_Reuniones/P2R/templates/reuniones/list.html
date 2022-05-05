@@ -1,0 +1,48 @@
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Reunion</th>
+                    <th>Hora de la Reunion:</th>
+                    <th>Fue Creado Hace:</th>
+                    <th>Participantes</th>
+                    <th>Creador</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for reunion in object_list %}
+                    <tr>
+                        <td>{{ reunion.pk }}</td>
+                        <td>{{ reunion.nombres_reunion }}</td>
+                        <td>{{ reunion.fecha_hora_reunion }}</td>
+                        <td>{{ reunion.fecha_hora_creacion | naturaltime }}</td>
+                        <td>{{ reunion.users }}</td>
+                        <td>{{ reunion.user_owner.username }}</td>
+                        <td><a href="{# {% url ' reunion.edit' reunion.pk %} TODO terminar Editar #}">Editar</a></td>
+                        <td>
+                            <a onclick="return confirm('Está seguro que desea eliminar el usuario?')"
+                               href="{% url 'reunion.delete' reunion.pk %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

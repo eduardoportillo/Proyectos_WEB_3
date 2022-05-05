@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+
+    {#    {% load static %}#}
+    {#    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">#}
+    {#    <script type="text/javascript" src="{% static "js/bootstrap.js" %}"></script>#}
+    {#    TODO Implementar archivos estaticos  #}
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Es Staff</th>
+                    <th>Es Super Usuario</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for user in object_list %}
+                    <tr>
+                        <td>{{ user.pk }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.password }}</td>
+                        <td>{{ user.is_staff }}</td>
+                        <td>{{ user.is_superuser }}</td>
+                        <td><a href="{# {% url 'personas:vehiculos.edit' user.pk %} TODO implementar Editar en user#}">Editar</a>
+                        </td>
+                        <td>
+                            <a onclick="return confirm('Está seguro que desea eliminar el usuario?')"
+                               href="{% url 'user.delete' user.pk %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
