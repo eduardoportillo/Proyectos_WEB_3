@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>Registro</title>
 
-    {#    TODO Implementar archivos estaticos  #}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
 
 </head>
 <body>
 <form class="form" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" id="submit">Registrarse</button>
+    <button type="submit" id="submit" >Registrarse</button>
 </form>
 
 </body>

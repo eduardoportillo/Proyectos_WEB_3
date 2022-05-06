@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Participantes</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static "style.css" %}">
-
 </head>
 <body>
+
 <nav>
     <ul class="header_ul">
+        <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
         {% if request.user.is_authenticated %}\
             <li class="header_ul_home"><span>User: {{ user.username }}</span></li>
-            <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'misreuniones' user.id %}">Mis Reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'reunionesasignadas' user.id %}">Reuniones Asignadas</a></li>
             {% if user.is_superuser %}
@@ -27,39 +27,29 @@
         {% endif %}
     </ul>
 </nav>
-<table class="table">
-    <thead>
+
+<table>
     <tr>
-        <th>ID</th>
-        <th>User Name</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Es Staff</th>
-        <th>Es Super Usuario</th>
-        <th>Editar</th>
+        <th>id</th>
+        <th>Reunion</th>
+        <th>Participante</th>
         <th>Eliminar</th>
     </tr>
-    </thead>
     <tbody>
 
-    {% for user in object_list %}
+    {% for reunion in reunion_by_user_list %}
         <tr>
-            <td>{{ user.pk }}</td>
-            <td>{{ user.username }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.password }}</td>
-            <td>{{ user.is_staff }}</td>
-            <td>{{ user.is_superuser }}</td>
-            <td><a href="{% url 'user.edit' user.pk %}">Editar</a>
-            </td>
+            <td>{{ reunion.id }}</td>
+            <td>{{ reunion.nombres_reunion }}</td>
+            <td>{{ reunion.username }}</td>
             <td>
-                <a onclick="return confirm('Está seguro que desea eliminar el usuario?')"
-                   href="{% url 'user.delete' user.pk %}">Eliminar</a>
+                <a onclick="return confirm('Está seguro que desea eliminar?')"
+                   href="{% url 'participantes.delete' reunion.id_reunion reunion.id %}">Eliminar
+                </a>
             </td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
-
 </body>
 </html>

@@ -117,7 +117,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-LOGIN_REDIRECT_URL = 'reunion.list' #TODO cambia a ruta listar reuniones
+LOGIN_REDIRECT_URL = '/reuniones'
+LOGOUT_REDIRECT_URL = "/reuniones"
 
 USE_L10N = False
 USE_TZ = False

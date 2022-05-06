@@ -16,7 +16,7 @@
             <li class="header_ul_home"><span>User: {{ user.username }}</span></li>
             <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'misreuniones' user.id %}">Mis Reuniones</a></li>
-            <li class="header_ul_home"><a href="{% url 'reunionesasignadas' user.id %}">Reuniones Asignadas</a></li>
+            <li class="header_ul_home"><a href="{% url 'reunionesasignadas' user.id %}">Proximas Asignadas</a></li>
             {% if user.is_superuser %}
                 <li class="header_ul_home"><a href="{% url 'user.list' %}">Todos los Usuarios</a></li>
             {% endif %}
@@ -42,8 +42,7 @@
     <tr>
         <th>ID</th>
         <th>Nombre Reunion</th>
-        <th>Fecha y Hora de la Reunion:</th>
-        <th>Falta:</th>
+        <th>Hora de la Reunion:</th>
         <th>Fue Creado Hace:</th>
         <th>Participantes</th>
         <th>Creador</th>
@@ -54,7 +53,7 @@
     </thead>
     <tbody>
 
-    {% for reunion in object_list %}
+    {% for reunion in reunion_asignada_list %}
         <tr>
             <td>{{ reunion.pk }}</td>
             <td>{{ reunion.nombres_reunion }}</td>

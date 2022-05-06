@@ -1,7 +1,7 @@
 
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView
 
 from entidades.forms.user_register_form import UserRegisterForm
@@ -18,12 +18,18 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
-            return redirect('user.list') # TODO redireccionar a reuniones creadas
+            return redirect('user.login')
     else:
         form = UserRegisterForm()
 
     context = {'form': form}
     return render(request, 'users/register.html', context)
+
+class UserUpdateView(UpdateView):
+    model = User
+    template_name = "users/form.html"
+    fields = "__all__"
+    success_url = '/users'
 
 
 def delete(request, user_id):

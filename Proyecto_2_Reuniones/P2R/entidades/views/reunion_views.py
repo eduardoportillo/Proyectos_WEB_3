@@ -1,4 +1,6 @@
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
+from django.template import loader
 from django.views.generic import ListView, CreateView, UpdateView
 from django.urls import reverse, reverse_lazy
 
@@ -29,3 +31,19 @@ def delete(request, reunion_id):
     reunion = get_object_or_404(Reunion, pk=reunion_id)
     reunion.delete()
     return redirect(reverse_lazy('reunion.list'))
+
+def misReuniones(request, owner_id):
+    reunion_list = Reunion.objects.filter(user_owner_id=owner_id)
+    template = loader.get_template('reuniones/misreuniones.html')
+    context = {
+        'reunion_by_user_list': reunion_list
+    }
+    return HttpResponse(template.render(context, request))
+
+def reunionesAsignadas(request, owner_id):
+    reunion_list = Reunion.objects.raw("SELECT er.* FROM entidades_reunion_users eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id=eru.user_id WHERE au.id ="+str(owner_id) )
+    template = loader.get_template('reuniones/reunionesasignadas.html')
+    context = {
+        'reunion_asignada_list': reunion_list
+    }
+    return HttpResponse(template.render(context, request))

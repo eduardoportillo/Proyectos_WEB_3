@@ -3,6 +3,32 @@ body {
     font-family: Arial;
 }
 
+label {
+    color: white;
+    font-size: 30px;
+}
+
+button {
+    text-decoration: none;
+    padidding: 20px;
+    background-color: white;
+    font-size: 20px
+}
+
+span {
+    color: white;
+    background-color: black;
+    font-size: 30px
+}
+
+#a_registrar {
+    text-decoration: none;
+    padidding: 40px;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+}
+
 #main-container {
     margin: 150px auto;
     width: 600px;
@@ -60,7 +86,7 @@ tr:hover td {
     line-height: 55px;
     text-align: center;
     border-radius: 50%;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     transition: all 500ms ease;
 }
 
@@ -92,10 +118,6 @@ tr:hover td {
     font-size: 25px;
 }
 
-{
-
-}
-
 .header_ul {
     float: left;
     list-style: none;
@@ -118,3 +140,4 @@ tr:hover td {
 .header_ul a:hover {
     color: red;
 }
+

@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reuniones</title>
+    <title>Mis Reuniones</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static "style.css" %}">
+
 </head>
 <body>
-{% csrf_token %}
 <nav>
     <ul class="header_ul">
         {% if request.user.is_authenticated %}\
@@ -28,6 +28,7 @@
         {% endif %}
     </ul>
 </nav>
+
 <div class="container">
     <input type="checkbox" id="btn-mas">
     <div class="redes">
@@ -37,25 +38,21 @@
         <label for="btn-mas" class="fa fa-plus"></label>
     </div>
 </div>
-<table class="table">
-    <thead>
+<table>
     <tr>
         <th>ID</th>
         <th>Nombre Reunion</th>
-        <th>Fecha y Hora de la Reunion:</th>
-        <th>Falta:</th>
+        <th>Hora de la Reunion:</th>
         <th>Fue Creado Hace:</th>
         <th>Participantes</th>
         <th>Creador</th>
         <th>Editar</th>
         <th>Eliminar</th>
-
     </tr>
-    </thead>
     <tbody>
 
-    {% for reunion in object_list %}
-        <tr>
+    {% for reunion in reunion_by_user_list %}
+       <tr>
             <td>{{ reunion.pk }}</td>
             <td>{{ reunion.nombres_reunion }}</td>
             <td>{{ reunion.fecha_hora_reunion }}</td>
