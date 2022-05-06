@@ -8,7 +8,7 @@ from entidades.models import Reunion, ReunionUser
 
 def participantesByReunion(request, reunion_id):
     reunion_list = Reunion.objects.raw(
-        "SELECT eru.id, er.id as id_reunion,er.nombres_reunion,au.username FROM entidades_reunionuser eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id  =eru.user_id WHERE er.id =" + str(
+        "SELECT eru.id, er.id as id_reunion,er.nombres_reunion, er.user_owner_id ,au.username FROM entidades_reunionuser eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id  =eru.user_id WHERE er.id =" + str(
             reunion_id))
     template = loader.get_template('participantes/list.html')
     context = {

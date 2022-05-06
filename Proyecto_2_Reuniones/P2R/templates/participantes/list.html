@@ -29,25 +29,12 @@
     </ul>
 </nav>
 
-<div class="container">
-    <input type="checkbox" id="btn-mas">
-    <div class="redes">
-{#        {% if request.user.is_authenticated %}#}
-{#            {% if user.id == participante.user_owner_id %}#}
-                <a href="{% url 'participante.create' %}" class="fa fa-facebook">+</a>
-{#            {% endif %}#}
-{#        {% endif %}#}
-    </div>
-    <div class="btn-mas">
-        <label for="btn-mas" class="fa fa-plus"></label>
-    </div>
-</div>
-
 <table>
     <tr>
         <th>id</th>
         <th>Reunion</th>
         <th>Participante</th>
+        <th>Editar</th>
         <th>Eliminar</th>
     </tr>
     <tbody>
@@ -57,14 +44,15 @@
             <td>{{ participante.id }}</td>
             <td>{{ participante.nombres_reunion }}</td>
             <td>{{ participante.username }}</td>
-            <td>
-                {% if request.user.is_authenticated %}
-                    {% if user.id == participante.user_owner_id %}
-                        <a onclick="return confirm('Está seguro que desea eliminar?')"
-                           href="{% url 'participantes.delete' participante.id_reunion participante.id %}">Eliminar
-                        </a>
-                    {% endif %}
+            {% if request.user.is_authenticated %}
+                {% if user.id == participante.user_owner_id %}
+                    <td><a href="{% url 'participante.create' %}">Editar</a></td>
+                    <td>
+                    <a onclick="return confirm('Está seguro que desea eliminar?')"
+                       href="{% url 'participantes.delete' participante.id_reunion participante.id %}">Eliminar
+                    </a>
                 {% endif %}
+            {% endif %}
             </td>
         </tr>
     {% endfor %}
