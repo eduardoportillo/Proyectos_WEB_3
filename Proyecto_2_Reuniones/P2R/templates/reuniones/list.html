@@ -28,15 +28,17 @@
         {% endif %}
     </ul>
 </nav>
-<div class="container">
-    <input type="checkbox" id="btn-mas">
-    <div class="redes">
-        <a href="{% url 'reunion.create' %}" class="fa fa-facebook">+</a>
+{% if request.user.is_authenticated %}
+    <div class="container">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href="{% url 'reunion.create' %}" class="fa fa-facebook">+</a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="fa fa-plus"></label>
+        </div>
     </div>
-    <div class="btn-mas">
-        <label for="btn-mas" class="fa fa-plus"></label>
-    </div>
-</div>
+{% endif %}
 <table class="table">
     <thead>
     <tr>
@@ -47,8 +49,10 @@
         <th>Fue Creado Hace:</th>
         <th>Participantes</th>
         <th>Creador</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
+        {% if request.user.is_authenticated %}
+            <th>Editar</th>
+            <th>Eliminar</th>
+        {% endif %}
 
     </tr>
     </thead>

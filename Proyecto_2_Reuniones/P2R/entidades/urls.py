@@ -1,6 +1,7 @@
 from django.urls import path
 
 from entidades.views import user_views, reunion_views, participante_views
+from entidades.views.participante_views import ParticipanteCreateView
 from entidades.views.reunion_views import ReunionListView, ReunionCreateView, ReunionUpdateView
 from entidades.views.user_views import UserListView, UserUpdateView
 from django.contrib.auth.views import LoginView, LogoutView
@@ -25,6 +26,7 @@ urlpatterns = [
 
     # Participantes
     path('participantes/<int:reunion_id>', participante_views.participantesByReunion, name="participantes.list"),
-    path('participantes/<int:reunion_id>/<int:participante_id>/delete', participante_views.participantesByReunion,
+    path('participantes/create', ParticipanteCreateView.as_view(), name='participante.create'),
+    path('participantes/<int:reunion_id>/<int:reunion_user_id>/delete', participante_views.delete,
          name="participantes.delete"),
 ]

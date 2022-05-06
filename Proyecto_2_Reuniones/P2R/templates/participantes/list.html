@@ -11,9 +11,10 @@
 
 <nav>
     <ul class="header_ul">
-        <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
-        {% if request.user.is_authenticated %}\
+
+        {% if request.user.is_authenticated %}
             <li class="header_ul_home"><span>User: {{ user.username }}</span></li>
+            <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'misreuniones' user.id %}">Mis Reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'reunionesasignadas' user.id %}">Reuniones Asignadas</a></li>
             {% if user.is_superuser %}
@@ -21,12 +22,26 @@
             {% endif %}
             <li class="header_ul_home"><a href="{% url 'user.logout' %}">Log Out</a></li>
         {% else %}
+            <li class="header_ul_home"><a href="{% url 'reunion.list' %}">Todas las reuniones</a></li>
             <li class="header_ul_home"><a href="{% url 'user.login' %}">Log In</a></li>
             <li class="header_ul_home"><a href="{% url 'user.register' %}">Sing Up</a></li>
-
         {% endif %}
     </ul>
 </nav>
+
+<div class="container">
+    <input type="checkbox" id="btn-mas">
+    <div class="redes">
+{#        {% if request.user.is_authenticated %}#}
+{#            {% if user.id == participante.user_owner_id %}#}
+                <a href="{% url 'participante.create' %}" class="fa fa-facebook">+</a>
+{#            {% endif %}#}
+{#        {% endif %}#}
+    </div>
+    <div class="btn-mas">
+        <label for="btn-mas" class="fa fa-plus"></label>
+    </div>
+</div>
 
 <table>
     <tr>
@@ -37,15 +52,19 @@
     </tr>
     <tbody>
 
-    {% for reunion in reunion_by_user_list %}
+    {% for participante in reunion_by_user_list %}
         <tr>
-            <td>{{ reunion.id }}</td>
-            <td>{{ reunion.nombres_reunion }}</td>
-            <td>{{ reunion.username }}</td>
+            <td>{{ participante.id }}</td>
+            <td>{{ participante.nombres_reunion }}</td>
+            <td>{{ participante.username }}</td>
             <td>
-                <a onclick="return confirm('Está seguro que desea eliminar?')"
-                   href="{% url 'participantes.delete' reunion.id_reunion reunion.id %}">Eliminar
-                </a>
+                {% if request.user.is_authenticated %}
+                    {% if user.id == participante.user_owner_id %}
+                        <a onclick="return confirm('Está seguro que desea eliminar?')"
+                           href="{% url 'participantes.delete' participante.id_reunion participante.id %}">Eliminar
+                        </a>
+                    {% endif %}
+                {% endif %}
             </td>
         </tr>
     {% endfor %}

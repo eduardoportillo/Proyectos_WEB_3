@@ -2,13 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.template import loader
 from django.urls import reverse_lazy
+from django.views.generic import CreateView
 
-from entidades.models import Reunion
-
+from entidades.models import Reunion, ReunionUser
 
 def participantesByReunion(request, reunion_id):
     reunion_list = Reunion.objects.raw(
-        "SELECT eru.id, er.id as id_reunion,er.nombres_reunion,au.username FROM entidades_reunion_users eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id  =eru.user_id WHERE er.id =" + str(
+        "SELECT eru.id, er.id as id_reunion,er.nombres_reunion,au.username FROM entidades_reunionuser eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id  =eru.user_id WHERE er.id =" + str(
             reunion_id))
     template = loader.get_template('participantes/list.html')
     context = {
@@ -16,8 +16,14 @@ def participantesByReunion(request, reunion_id):
     }
     return HttpResponse(template.render(context, request))
 
+class ParticipanteCreateView(CreateView):
+    model = ReunionUser
+    fields = ['reunion', 'user']
+    template_name = "participantes/form.html"
+    success_url = reverse_lazy('reunion.list')
+
 # TODO SOLUCIONAR ELIMINAR PARTICIPANTE
-def delete(request, reunion_id,participante_id):
-    participante = Reunion.objects.raw("SELECT * FROM entidades_reunion_users WHERE id ="+str(participante_id))
+def delete(request, reunion_id,reunion_user_id):
+    participante = get_object_or_404(ReunionUser, pk=str(reunion_user_id))
     participante.delete()
-    return redirect(reverse_lazy('participantes.list' +  reunion_id))
+    return redirect("/participantes/"+str(reunion_id))

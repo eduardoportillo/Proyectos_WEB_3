@@ -41,7 +41,7 @@ def misReuniones(request, owner_id):
     return HttpResponse(template.render(context, request))
 
 def reunionesAsignadas(request, owner_id):
-    reunion_list = Reunion.objects.raw("SELECT er.* FROM entidades_reunion_users eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id=eru.user_id WHERE au.id ="+str(owner_id) )
+    reunion_list = Reunion.objects.raw("SELECT er.* FROM entidades_reunionuser eru JOIN entidades_reunion er on er.id = eru.reunion_id JOIN  auth_user au ON au.id=eru.user_id WHERE au.id ="+str(owner_id) )
     template = loader.get_template('reuniones/reunionesasignadas.html')
     context = {
         'reunion_asignada_list': reunion_list

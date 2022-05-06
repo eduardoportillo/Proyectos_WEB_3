@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Participante</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+<form class="form" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="submit">Enviar</button>
+</form>
+</body>
+</html>
