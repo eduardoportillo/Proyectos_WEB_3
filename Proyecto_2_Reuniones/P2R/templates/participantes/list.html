@@ -34,7 +34,7 @@
         <th>id</th>
         <th>Reunion</th>
         <th>Participante</th>
-        <th>Editar</th>
+        <th>Añadir</th>
         <th>Eliminar</th>
     </tr>
     <tbody>
@@ -46,7 +46,7 @@
             <td>{{ participante.username }}</td>
             {% if request.user.is_authenticated %}
                 {% if user.id == participante.user_owner_id %}
-                    <td><a href="{% url 'participante.create' %}">Editar</a></td>
+                    <td><a href="{% url 'participante.create' %}">Añadir</a></td>
                     <td>
                     <a onclick="return confirm('Está seguro que desea eliminar?')"
                        href="{% url 'participantes.delete' participante.id_reunion participante.id %}">Eliminar
