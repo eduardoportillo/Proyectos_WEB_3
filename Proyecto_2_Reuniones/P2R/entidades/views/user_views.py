@@ -1,4 +1,3 @@
-
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse, reverse_lazy
@@ -10,7 +9,6 @@ from entidades.forms.user_register_form import UserRegisterForm
 class UserListView(ListView):
     model = User
     template_name = "users/list.html"
-
 
 def register(request):
     if request.method == 'POST':
