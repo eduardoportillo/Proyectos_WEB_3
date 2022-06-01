@@ -1,0 +1,206 @@
+#section-form {
+  padding: 10px;
+  background-color: #1b1717;
+}
+
+form {
+  flex-direction: column;
+}
+
+form img {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.password {
+  font-size: 14px;
+}
+
+#repit-password {
+  width: 119px;
+}
+
+form label {
+  margin: 10px;
+  color: #ce1212;
+  font-family: pattaya;
+}
+
+#seleccion-file{
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#seleccion-file::before{
+  background-color: #ce1212;
+  width: 135px;
+  font-family: pattaya;
+  color: white;
+  display: flex;            
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar Foto'; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+}
+
+#seleccion-file input[type="file"] {
+  opacity: 0;
+  width: auto;
+  height: 32px;
+  display: inline-block;  
+  margin-right: auto;
+  margin-left: auto;          
+}
+
+#label-DP{
+  
+}
+
+form button {
+  font-family: pattaya;
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ce1212;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #Switch_label {
+    display: none;
+  }
+  #Main_menu ul {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #Main_menu {
+    margin-top: 45px;
+    border: none;
+  }
+
+  #Main_menu ul,
+  #Main_menu li {
+    display: inline-block;
+    text-align: left;
+    border: none;
+  }
+
+  #Main_menu a span {
+    display: block;
+    font-size: 14px;
+  }
+
+  #Main_menu a span::after {
+    display: none;
+  }
+
+  #Main_menu li:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  #Main_menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: #ce1212;
+    color: white;
+    box-shadow: 3px 4px 5px grey;
+  }
+
+  #section-form {
+    margin: 10px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form div {
+    margin: 0;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+  }
+
+  .password {
+    font-size: 20px;
+  }
+
+  form img {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form button{
+      font-size: 20px;
+  }
+
+  #error{
+      font-family: pattaya;
+      font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #Main_menu li:not(:first-child) {
+    margin-left: 60px;
+  }
+
+  #section-form {
+    margin: 10px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form div {
+    margin: 0;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+  }
+
+  .password {
+    font-size: 20px;
+  }
+
+  form img {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  form button{
+      font-size: 20px;
+  }
+
+  #error{
+      font-family: pattaya;
+      font-size: 20px;
+  }
+}
