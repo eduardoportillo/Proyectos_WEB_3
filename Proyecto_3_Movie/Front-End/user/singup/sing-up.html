@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <section id="section-form">
+      <form class="flex" id="form-singup">
+
+        <div>
+          <label for="name">User Name:</label>
+          <input type="text" id="name" name="nombre" />
+        </div>
+
+        <div>
+          <label for="email"> Email:</label>
+          <input type="text" id="email" name="correo" />
+        </div>
+
+        <div class="password">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" minlength="8"/>
+        </div>
+
+        <div class="password">
+          <label for="repit-password">Repite la Contraseña:</label>
+          <input type="password" id="repit-password" name="repit-password" minlength="8"/>
+        </div>
+
+        <div id="error"></div>
+
+        <button type="button" id="button-singup" onclick="sendUser();" style="cursor: pointer;">Registrarse</button>
+      </form>
+    </section>
+
+    <script src="/servisofts/index.js"></script>
+    <script src="./ValidateSingup.js"></script>
+  </body>
+</html>
