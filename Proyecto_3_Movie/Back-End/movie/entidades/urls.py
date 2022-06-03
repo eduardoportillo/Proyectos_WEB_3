@@ -11,7 +11,6 @@ router = routers.DefaultRouter()
 router.register(r'movie', MovieViewSet)
 router.register(r'gender', GenderViewSet)
 router.register(r'movie-gender', MovieGenderViewSet)
-# router.register(r'singup',SignupView)
 
 urlpatterns = [
     path('', include(router.urls)),

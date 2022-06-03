@@ -1,57 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/pagina-principal.css" />
-    <link rel="stylesheet" href="./css/anuncio-box.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/pagina-principal.css" />
+		<link rel="stylesheet" href="/css/anuncio-box.css" />
 
-    <script
-      src="https://kit.fontawesome.com/51f0d0946e.js"
-      crossorigin="anonymous"
-    ></script>
+		<script
+			src="https://kit.fontawesome.com/51f0d0946e.js"
+			crossorigin="anonymous"
+		></script>
 
-    <title>Pagina Principal</title>
-  </head>
-  <body>
-    <header >
-      <a href="./index.html">
-        <div id="logo" class="flex">
-          <img src="/Front-end/img/SVG/logo.svg" alt="logo.svg" />
-          <span>marketplis</span>
-        </div>
-      </a>
-
-      <nav id="Main_menu" >
-        <label id="Switch_label" for="menu-switch">
-          <i class="fas fa-bars"></i>
-          Menu
-        </label>
-
-        <input type="checkbox" id="menu-switch" />
-
-        <ul id="ul-market-plis">
+		<title>Pagina Principal</title>
+	</head>
+	<body>
+    <header>
+      <div id="header">
+        <ul class="nav">
           <li>
-            <a href="./tus-anuncios.html" id="tu-anuncio"> Tus Anuncios </a>
-          </li>
-          <li>
-            <a href="crear-anuncio.html" id="vender"> Vender </a>
-          </li>
-          <li>
-            <a id="cerrar" type="button" id="cerrar"> cerrar </a>
+            <a href="">Generos</a>
+            <ul id="ul-genero">
+              
+            </ul>
+            <li><a id="create-movie">Agregar Pelicula</a></li>
+            <li><a id="create-gender">Agregar Genero</a></li>
+            <li><a id="cerrar">Cerrar</a></li>
           </li>
         </ul>
-      </nav>
+      </div>
     </header>
-
+		
     <section id="market-plis-section" class="flex">
       <div id="market-plis-div" style="display: flex;">
 
       </div>
     </section>
-
-    <script src="./JS/IndexRedirect.js"></script>
-    <script src="./JS/marketPlis.js"></script>
-  </body>
+		<script src="/js/IndexRedirect.js"></script>
+		<script src="/js/marketPlis.js"></script>
+	</body>
 </html>

@@ -20,7 +20,7 @@
     margin-bottom: 10px;
     border-radius: 4px;
     width: 300px;
-    height: 350px;
+    height: 500px;
     background-color: #1b171744;
 }
   
@@ -39,5 +39,8 @@ padding:0;
   
   .divAnuncios .button{
     text-decoration: none;
-    color: #ce1212;
+    margin-left: 50px;
+    padding: 10px;
+    color: white;
+    background-color: #ce1212;
   }
