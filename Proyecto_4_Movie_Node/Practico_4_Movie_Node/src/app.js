@@ -1,17 +1,21 @@
 const express = require("express");
 const logger = require('morgan');
 const sequelize = require("./config/db");
-const movieRoutes = require("./routes/movie.routes");
+const movieRoutes = require("./routes/Routes");
 const app = express();
 
-app.use(logger('dev'));
 
+//db
 sequelize.sync().then(() => console.log("database connected successfully"));
 
+//server config
 app.use(express.json());
+app.use(logger('dev'));
 
-app.use("/api/movie",movieRoutes)
+//routes
+app.use(require('./routes/Routes'));
 
+//Http Server
 app.listen(3000, () => {
-    console.log("Server started on port 3000");
+    console.log("Server started on http://localhost:3000/");
   });
