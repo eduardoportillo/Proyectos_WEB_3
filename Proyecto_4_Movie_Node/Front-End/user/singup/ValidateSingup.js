@@ -7,7 +7,7 @@ function validate() {
 validate();
 
 function sendUser() {
-	const url_sing_up = 'http://localhost:8000/entidades/signup/';
+	const url_sing_up = 'http://localhost:3000/entidades/signup/';
 
 	let nombre = document.getElementById('name');
 	let email = document.getElementById('email');
@@ -47,7 +47,7 @@ function sendUser() {
 		return;
 	}
 
-	fetch(url_sing_up, {
+	fetch(url_sing_up, { // TODO cambiar a http servi
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -60,10 +60,10 @@ function sendUser() {
 	})
 		.then(res => res.json())
 		.then(data => {
-			if (data.email&&data.username) {
+			if (data.token) {
 				window.location.href = '../login/index.html';
 			} else {
-				error.innerHTML = 'El Usuario ya existe';
+				error.innerHTML = data.msg;
 			}
 		});
 }

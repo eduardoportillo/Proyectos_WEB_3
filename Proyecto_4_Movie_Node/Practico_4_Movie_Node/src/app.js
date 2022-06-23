@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require('morgan');
 const sequelize = require("./config/db");
+let cors = require('cors');
 const movieRoutes = require("./routes/Routes");
 const app = express();
 
@@ -9,6 +10,8 @@ const app = express();
 //server config
 app.use(express.json());
 app.use(logger('dev'));
+app.use(cors());
+app.use('/images', express.static(__dirname+'/images'));
 
 //routes
 app.use(require('./routes/Routes'));

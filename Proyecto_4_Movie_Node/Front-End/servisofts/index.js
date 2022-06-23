@@ -75,14 +75,14 @@ async function __init() {
     SLog.debug("Initializing sevisofts framework...");
     SLog.debug("Importing required modules");
     await sleep(100);
-    for (let i = 0; i < Object.values(__modules).length; i++) {
-        await __require(Object.values(__modules)[i]);
+    for (const element of Object.values(__modules)) {
+        await __require(element);
     }
     __loadClasses();
 }
 
 async function __loadComponent(url) {
-    return await __require("/servisofts/Components/" + url);
+    return await __require(`/servisofts/Components/${url}`);
 }
 
 async function __require(url) {

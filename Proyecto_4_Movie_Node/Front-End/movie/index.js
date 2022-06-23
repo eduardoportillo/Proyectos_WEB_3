@@ -21,8 +21,8 @@ class index extends scomponent {
             console.log(data);
             let listaItems = document.getElementById("listaItems");
             var data = data.filter(item => item.id == this.id);
-            for (let i = 0; i < data.length; i++) {
-                var obj = data[i];
+            for (const element of data) {
+                var obj = element;
                 var movie = obj;
                 movie.image = movie.image;
                 listaItems.innerHTML += `

@@ -1,5 +1,6 @@
 const Movie = require('../models/MovieModel');
 const uuid = require('uuid');
+const path = require('path');
 
 module.exports = {
 	async index(req, res) {
@@ -35,14 +36,27 @@ module.exports = {
 			});
 			return;
 		}
+		if (req.file !== undefined) {
+			let path_multer = req.file.path;
+			let name_img = path_multer.substring(11, path_multer.length);
+			url_server = "http://127.0.0.1:3000/"
+			url_fotografia = `${url_server}images/${name_img}` //TODO ver de solucionar el insert de las rutas
+		  } else {
+			url_fotografia = "\img-no-insertada";
+		  }
 
-		uuidGenerator = uuid.v4();
-		console.log(uuidGenerator);
+		  if(!req.body.genders){
+			res.status(400).send({
+				message: "se espera un array de generos"
+			});
+			return;
+		}
+
 		const movie = await Movie.create({
 			name: req.body.name,
-			code: uuidGenerator,
+			code: uuid.v4(),
 			description: req.body.description,
-			image: "Aqui va la Ruta"
+			image: url_fotografia + ""
 		});
 	
 		res.send(movie);

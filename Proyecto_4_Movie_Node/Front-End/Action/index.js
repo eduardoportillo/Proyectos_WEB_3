@@ -10,19 +10,19 @@ class Action {
     static async token({ username, password }) {
         return new Promise((resolve, reject) => {
             HTTP.POST("/api/token/", {
-                username: username,
+                email: username,
                 password: password,
             }).then(data => {
-                if (data.detail) {
+                if (!data.token) {
                     this.__TOKEN = "";
-                    reject({ message: data.detail });
+                    reject({ message: data.msg });
                 } else {
-                    this.__TOKEN = data;
-                    localStorage.setItem("JWT", JSON.stringify(data));
+                    this.__TOKEN = data.token;
+                    localStorage.setItem("JWT", JSON.stringify(data.token));
                     resolve(data);
                     return;
                 }
-                reject({ message: "error desconocido" });
+                // reject({ message: "error desconocido" });
 
             })
         });
@@ -47,9 +47,23 @@ class Action {
             formData.append("name", name);
             formData.append("description", description);
             formData.append("image", image);
-            formData.append("genders", JSON.stringify({ "k1": 1, "K2": 2,  "K3": 3}));
+            formData.append("genders", JSON.stringify({ "G1": 1, "G2": 2,  "G3": 3}));
 
-            HTTP.MULTIPART(`/entidades/movie/`, formData, this.__TOKEN.access).then(data => {
+            HTTP.MULTIPART(`/entidades/movie/`, formData, this.__TOKEN).then(data => {
+                resolve(data);
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
+
+    static async deleteMovie(id) {
+        return new Promise((resolve, reject) => {
+            if (!this.__TOKEN) {
+                reject({ message: "no token" });
+                return;
+            }
+            HTTP.DELETE(`/entidades/movie/${id}/`, this.__TOKEN).then(data => {
                 resolve(data);
             }).catch(err => {
                 reject(err);
@@ -76,7 +90,7 @@ class Action {
             const formData = new FormData();
             formData.append("name", name);
 
-            HTTP.MULTIPART(`/entidades/gender/`, formData, this.__TOKEN.access).then(data => {
+            HTTP.MULTIPART(`/entidades/gender/`, formData, this.__TOKEN).then(data => {
                 resolve(data);
             }).catch(err => {
                 reject(err);
@@ -90,36 +104,18 @@ class Action {
                 reject({ message: "no token" });
                 return;
             }
-            HTTP.GET(`/entidades/movie-gender/${id}/list/`, this.__TOKEN.access).then(data => {
+            HTTP.GET(`/entidades/movie-gender/${id}/list/`, this.__TOKEN).then(data => {
                 resolve(data);
             }).catch(err => {
                 reject(err);
             })
         });
     }
-
-    // Delete Movie
-    static async deleteMovie(id) {
-        return new Promise((resolve, reject) => {
-            if (!this.__TOKEN) {
-                reject({ message: "no token" });
-                return;
-            }
-            HTTP.DELETE(`/entidades/movie/${id}/`, this.__TOKEN.access).then(data => {
-                resolve(data);
-            }).catch(err => {
-                reject(err);
-            })
-        });
-    }
-
-
-
 }
 
 
 class HTTP {
-    static __URL_API = 'http://127.0.0.1:8000';
+    static __URL_API = 'http://127.0.0.1:3000';
 
     static async POST(url, data, bearer) {
         return new Promise((resolve, reject) => {

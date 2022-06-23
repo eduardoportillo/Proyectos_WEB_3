@@ -29,7 +29,7 @@ module.exports = {
                 }
             }
         }).catch(err => {
-            res.status(500).json(err);
+            res.status(500).json({msg: err})
         })
 
 
@@ -47,13 +47,12 @@ module.exports = {
             let token = jwt.sign({user: user}, "proyecto4_web3", {
                 expiresIn: "24h"
             })
-
             res.json({
                 user: user,
                 token:token
             });
         }).catch(err => {
-            res.status(500).json(err)
+            res.status(500).json({msg: err.errors[0].message})
         })
     }
 }
