@@ -1,5 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/db');
+const Movie = require("./MovieModel")
 
 class Gender extends Model {}
 
@@ -21,5 +22,7 @@ Gender.init(
 		timestamps: false,
 	}
 );
+
+// Gender.belongsToMany(Movie, {through: "movie_gender"})
 
 module.exports = Gender;
