@@ -11,8 +11,7 @@ module.exports = {
     },
 
     update(req, res, next){
-        if(req.user.id === req.user.userId || User.isAdmin(req.user.roles)){ // TODO Pillar por que no pasareq.user.roles 
-            next();
+        if(req.user.id === req.user.userId || User.isAdmin(req.user.roles)){
         }else{
             res.status(403).json({msg: "No estas autorizado para correr la ruta update"})
         }

@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 	},
 	filename: function (req, file, cb) {
 		let ext = path.extname(file.originalname);
-		const fileName = uuid.v4()+ "-" + file.originalname;
+		const fileName = uuid.v4() + '-' + file.originalname;
 		cb(null, fileName);
 	},
 });
@@ -39,7 +39,12 @@ router.post(
 	auth,
 	movieController.store
 );
-router.put('/entidades/movie/:movieId', auth, movieController.update);
+router.patch(
+	'/entidades/movie/:movieId',
+	upload.single('image'),
+	auth,
+	movieController.update
+);
 router.delete('/entidades/movie/:movieId', auth, movieController.delete);
 
 //Gender
@@ -50,6 +55,10 @@ router.put('/entidades/gender/:genderId', auth, genderController.update);
 router.delete('/entidades/gender/:genderId', auth, genderController.delete);
 
 //MovieGender
-router.get('/entidades/movie-gender/:genderId/list/', auth, movieGenderController.show);
+router.get(
+	'/entidades/movie-gender/:genderId/list/',
+	auth,
+	movieGenderController.show
+);
 
 module.exports = router;

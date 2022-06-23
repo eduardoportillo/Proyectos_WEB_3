@@ -17,7 +17,7 @@ module.exports = {
                 res.status(404).json({ msg: "Usuario con este correo no encontrado" });
             } else {
                 if (bcrypt.compareSync(password, user.password)) {
-                    let token = jwt.sign({ user: user }, "proyecto4_web3", {
+                    let token = jwt.sign({ user: user }, 'salt', {
                         expiresIn: "24h"
                     })
                     res.json({

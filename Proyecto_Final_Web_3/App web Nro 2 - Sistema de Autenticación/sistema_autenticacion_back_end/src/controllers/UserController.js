@@ -2,23 +2,25 @@ const User = require("../models/UserModel");
 
 module.exports = {
     async find(req, res, next) {
-        let user = await User.findByPk(req.params.userId);
+        let userC = await User.findByPk(req.params.userId);
 
-        if (!user) {
-            res.status(404).json({ msg: "El user no se encontrado" });
+        if (!userC) {
+            res.status(404).json({ msg: "El usuario no se encontro"});
         } else {
-            req.user = user;
+            req.userC = userC;
             next();
         }
     },
     async update(req, res) {
+        
+        let passwordEncrypt = bcrypt.hashSync(req.body.password, 10)
 
-        req.user.username = req.body.username;
-        req.user.password = req.body.password;
-        req.user.email = req.body.email;
+        req.userC.username = req.body.username;
+        req.userC.password = passwordEncrypt;
+        req.userC.email = req.body.email;
 
-        req.user.save().then(user => {
-            res.json(user);
+        req.userC.save().then(userC => {
+            res.json(userC);
         })
 
     },

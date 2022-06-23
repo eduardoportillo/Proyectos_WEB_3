@@ -1,6 +1,7 @@
 const Movie = require('../models/MovieModel');
 const uuid = require('uuid');
 const path = require('path');
+const Gender = require('../models/GenderModel');
 
 module.exports = {
 	async index(req, res) {
@@ -15,12 +16,20 @@ module.exports = {
 			});
 			return;
 		}
-		const movie = await Movie.findByPk(req.params.movieId);
-		if (movie == null) {
+
+		// const movie = await Movie.findByPk(req.params.movieId);
+		const movieWithGender = await Movie.findAll({
+            where: {
+                "id": req.params.movieId
+            },include:{
+                model: Gender,
+            }
+        });	
+		if (movieWithGender == null) {
 			res.status(404).send({message: 'Pelicula no encontrada'});
 			return;
 		}
-		res.send(movie);
+		res.send(movieWithGender);
 	},
 
 	async store(req, res) {
@@ -75,28 +84,33 @@ module.exports = {
 			});
 			return;
 		}
+
 		const movie = await Movie.findByPk(req.params.movieId);
 		if (movie == null) {
 			res.status(404).send({message: 'Pelicula no encontrada'});
 			return;
 		}
 
-		if (!req.body.name) {
-			res.status(400).send({
-				message: 'El nombre es requerido',
-			});
-			return;
-		}
-		if (!req.body.description) {
-			res.status(400).send({
-				message: 'El descripción es requerido',
-			});
-			return;
+		if (req.file !== undefined) {
+			let path_multer = req.file.path;
+			let name_img = path_multer.substring(11, path_multer.length);
+			url_server = 'http://127.0.0.1:3000/';
+			url_fotografia = `${url_server}images/${name_img}`;
+		} else {
+			url_fotografia = movie.image;
 		}
 
 		movie.name = req.body.name;
 		movie.description = req.body.description;
+		movie.image = url_fotografia,
 		await movie.save();
+
+		// genderJson = JSON.parse(req.body.genders); // TODO ver como implementar Update a Genders
+
+		// for (let gen in genderJson) {
+		// 	console.log(genderJson[gen]);
+		// 	movie.addGender([genderJson[gen]]);
+		// }
 
 		res.send(movie);
 	},

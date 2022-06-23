@@ -45,8 +45,19 @@ User.init(
 // 	User.belongsToMany(Role, {through: 'user_role'});
 // };
 
-User.belongsToMany(Role, {through: 'user_role'});
-Role.belongsToMany(User, {through: 'user_role'});
+User.belongsToMany(Role,  {
+    through: 'user_role',
+    foreignKey: Role.id,
+    onUpdate: 'CASCADE', // optional
+    onDelete: 'CASCADE',
+  });
+  
+Role.belongsToMany(User,  {
+    through: 'user_role',
+    foreignKey: User.id,
+    onUpdate: 'CASCADE', // optional
+    onDelete: 'CASCADE',
+  });
 
 User.isAdmin = roles => {
 	let tmpArray = [];

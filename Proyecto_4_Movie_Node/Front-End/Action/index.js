@@ -37,6 +37,16 @@ class Action {
             })
         });
     }
+
+    static async getMoviesById(idMovie) {
+        return new Promise((resolve, reject) => {
+            HTTP.GETBYTOKEN(`/entidades/movie/${idMovie}`,this.__TOKEN).then(data => {
+                resolve(data);
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
     static async createMovie({ name, description, image }) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
@@ -80,23 +90,6 @@ class Action {
             })
         });
     }
-
-    // static async createGender({ name }) {
-    //     return new Promise((resolve, reject) => {
-    //         if (!this.__TOKEN) {
-    //             reject({ message: "no token" });
-    //             return;
-    //         }
-    //         const formData = new FormData();
-    //         formData.append("name", name);
-
-    //         HTTP.MULTIPART(`/entidades/gender/`, formData, this.__TOKEN).then(data => {
-    //             resolve(data);
-    //         }).catch(err => {
-    //             reject(err);
-    //         })
-    //     });
-    // }
 
     static async createGender({ name }) {
         return new Promise((resolve, reject) => {
@@ -176,6 +169,26 @@ class HTTP {
         })
     }
     static async GET(url, bearer) {
+        return new Promise((resolve, reject) => {
+            var headers = {
+                'Content-Type': 'application/json'
+            }
+            if (bearer) {
+                headers['Authorization'] = `Bearer ${bearer}`;
+            }
+            fetch(this.__URL_API + url, {
+                method: 'GET',
+                headers,
+            }).then(res => res.json()).then(data => {
+                console.log(data);
+                resolve(data);
+            }).catch(err => {
+                reject(err);
+            });
+        })
+    }
+
+    static async GETBYTOKEN(url, bearer) {
         return new Promise((resolve, reject) => {
             var headers = {
                 'Content-Type': 'application/json'
