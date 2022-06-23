@@ -39,5 +39,6 @@ Movie.init(
 );
 
 Movie.belongsToMany(Gender, {through: "movie_gender"});
+Gender.belongsToMany(Movie, {through: "movie_gender"});
 
 module.exports = Movie;

@@ -81,22 +81,41 @@ class Action {
         });
     }
 
+    // static async createGender({ name }) {
+    //     return new Promise((resolve, reject) => {
+    //         if (!this.__TOKEN) {
+    //             reject({ message: "no token" });
+    //             return;
+    //         }
+    //         const formData = new FormData();
+    //         formData.append("name", name);
+
+    //         HTTP.MULTIPART(`/entidades/gender/`, formData, this.__TOKEN).then(data => {
+    //             resolve(data);
+    //         }).catch(err => {
+    //             reject(err);
+    //         })
+    //     });
+    // }
+
     static async createGender({ name }) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
                 reject({ message: "no token" });
                 return;
             }
-            const formData = new FormData();
-            formData.append("name", name);
+            const data = {
+                "name": name
+            }
 
-            HTTP.MULTIPART(`/entidades/gender/`, formData, this.__TOKEN).then(data => {
+            HTTP.POST(`/entidades/gender/`, data, this.__TOKEN).then(data => {
                 resolve(data);
             }).catch(err => {
                 reject(err);
             })
         });
     }
+
     // -----> MOVIE_GENDER
     static async getMoviesGender(id) {
         return new Promise((resolve, reject) => {

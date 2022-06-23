@@ -21,9 +21,10 @@ const storage = multer.diskStorage({
 let upload = multer({storage: storage});
 
 //Controllers
+const AuthController = require('../controllers/AuthController');
 const movieController = require('../controllers/MovieController');
 const genderController = require('../controllers/GenderController');
-const AuthController = require('../controllers/AuthController');
+const movieGenderController = require('../controllers/MovieGenderController');
 
 //Auth
 router.post('/api/token/', AuthController.singIn);
@@ -47,4 +48,8 @@ router.get('/entidades/gender/:genderId', auth, genderController.show);
 router.post('/entidades/gender/', auth, genderController.store);
 router.put('/entidades/gender/:genderId', auth, genderController.update);
 router.delete('/entidades/gender/:genderId', auth, genderController.delete);
+
+//MovieGender
+router.get('/entidades/movie-gender/:genderId/list/', auth, movieGenderController.show);
+
 module.exports = router;

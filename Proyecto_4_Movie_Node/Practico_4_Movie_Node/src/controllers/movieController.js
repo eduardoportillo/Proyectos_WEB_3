@@ -8,46 +8,46 @@ module.exports = {
 		return res.status(200).json(movies);
 	},
 
-	async show(req, res){
-		if(!req.params.movieId){
+	async show(req, res) {
+		if (!req.params.movieId) {
 			res.status(400).send({
-				message: "El id de la pelicula es requerido"
+				message: 'El id de la pelicula es requerido',
 			});
 			return;
 		}
 		const movie = await Movie.findByPk(req.params.movieId);
 		if (movie == null) {
-			res.status(404).send({ message: "Pelicula no encontrada" });
+			res.status(404).send({message: 'Pelicula no encontrada'});
 			return;
 		}
 		res.send(movie);
 	},
 
-	async store(req, res){
-		if(!req.body.name){
+	async store(req, res) {
+		if (!req.body.name) {
 			res.status(400).send({
-				message: "El nombre es requerido"
+				message: 'El nombre es requerido',
 			});
 			return;
 		}
-		if(!req.body.description){
+		if (!req.body.description) {
 			res.status(400).send({
-				message: "El descripción es requerido"
+				message: 'El descripción es requerido',
 			});
 			return;
 		}
 		if (req.file !== undefined) {
 			let path_multer = req.file.path;
 			let name_img = path_multer.substring(11, path_multer.length);
-			url_server = "http://127.0.0.1:3000/"
-			url_fotografia = `${url_server}images/${name_img}` //TODO ver de solucionar el insert de las rutas
-		  } else {
-			url_fotografia = "\img-no-insertada";
-		  }
+			url_server = 'http://127.0.0.1:3000/';
+			url_fotografia = `${url_server}images/${name_img}`;
+		} else {
+			url_fotografia = 'img-no-insertada';
+		}
 
-		  if(!req.body.genders){
+		if (!req.body.genders) {
 			res.status(400).send({
-				message: "se espera un array de generos"
+				message: 'se espera un array de generos',
 			});
 			return;
 		}
@@ -56,33 +56,40 @@ module.exports = {
 			name: req.body.name,
 			code: uuid.v4(),
 			description: req.body.description,
-			image: url_fotografia + ""
+			image: url_fotografia,
 		});
-	
+
+		genderJson = JSON.parse(req.body.genders);
+
+		for (let gen in genderJson) {
+			console.log(genderJson[gen]);
+			movie.addGender([genderJson[gen]]);
+		}
+
 		res.send(movie);
 	},
-	async update(req, res){
-		if(!req.params.movieId){
+	async update(req, res) {
+		if (!req.params.movieId) {
 			res.status(400).send({
-				message: "El id de la movie es requerido"
+				message: 'El id de la movie es requerido',
 			});
 			return;
 		}
 		const movie = await Movie.findByPk(req.params.movieId);
 		if (movie == null) {
-			res.status(404).send({ message: "Pelicula no encontrada" });
+			res.status(404).send({message: 'Pelicula no encontrada'});
 			return;
 		}
-	
-		if(!req.body.name){
+
+		if (!req.body.name) {
 			res.status(400).send({
-				message: "El nombre es requerido"
+				message: 'El nombre es requerido',
 			});
 			return;
 		}
-		if(!req.body.description){
+		if (!req.body.description) {
 			res.status(400).send({
-				message: "El descripción es requerido"
+				message: 'El descripción es requerido',
 			});
 			return;
 		}
@@ -90,24 +97,24 @@ module.exports = {
 		movie.name = req.body.name;
 		movie.description = req.body.description;
 		await movie.save();
-	
+
 		res.send(movie);
 	},
-	async delete(req,res){
-		if(!req.params.movieId){
+	async delete(req, res) {
+		if (!req.params.movieId) {
 			res.status(400).send({
-				message: "El id de la persona es requerido"
+				message: 'El id de la persona es requerido',
 			});
 			return;
 		}
 		const movie = await Movie.findByPk(req.params.movieId);
 		if (movie == null) {
-			res.status(404).send({ message: "Persona no encontrada" });
+			res.status(404).send({message: 'Persona no encontrada'});
 			return;
 		}
 		await movie.destroy();
-		res.send({msg: `movie: id:${movie.id} name:${movie.name} fue eliminado`});
-	}
-
+		res.send({
+			msg: `movie: id:${movie.id} name:${movie.name} fue eliminado`,
+		});
+	},
 };
-
