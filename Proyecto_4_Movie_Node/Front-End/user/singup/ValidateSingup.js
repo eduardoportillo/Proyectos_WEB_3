@@ -7,7 +7,7 @@ function validate() {
 validate();
 
 function sendUser() {
-	const url_sing_up = 'http://localhost:3000/entidades/signup/';
+	const url_sing_up = 'http://127.0.0.1:3000/entidades/signup/';
 
 	let nombre = document.getElementById('name');
 	let email = document.getElementById('email');

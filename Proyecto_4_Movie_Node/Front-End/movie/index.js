@@ -11,7 +11,6 @@ class index extends scomponent {
 		this.Footer = new Footer({});
 		this.idMovie = getParam('id');
 		parseInt(this.idMovie);
-		console.log(this.idMovie);
 	}
 
 	onLoad() {
@@ -37,14 +36,12 @@ class index extends scomponent {
                     <p style="color: #000; font-size: 12px;">${
 						movie.description
 					}</p>
-                    <a style="color: BLUE;" onClick="Action.update(${
-						this.id
-					})">Actualizar<a>
+                    <a style="color: BLUE;" onClick="redirectUpdateMovie(${movie.id})">Actualizar<a>
                     <br>
                    
                     <br>
                     <a style="color: RED;" onClick="Action.deleteMovie(${
-						this.id
+						this.idMovie
 					})">Eliminar<a>
                 </div>
                 `;
@@ -73,5 +70,9 @@ class index extends scomponent {
                 
         `;
 	}
+}
+
+function redirectUpdateMovie(idMovie){
+    window.location.href =`/movie/create/index.html?idMovie=${idMovie}`;
 }
 smodule.connect(index);
