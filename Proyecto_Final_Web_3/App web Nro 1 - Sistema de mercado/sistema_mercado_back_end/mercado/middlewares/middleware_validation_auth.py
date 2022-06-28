@@ -1,5 +1,6 @@
-# import requests
 import jwt
+from django.http import JsonResponse
+from rest_framework import status
 
 class ValidationAuthMiddleware:
     def __init__(self, get_response):
@@ -11,22 +12,16 @@ class ValidationAuthMiddleware:
 
     def process_view(self, request, view_func, view_args, view_kwargs):
         url = request.META.get('PATH_INFO')
-        jwtReq = request.headers.get('authorization')
-        jwtReq = jwtReq.replace("Bearer ", "")
-        print(jwtReq)
-        jwtDecode = jwt.decode(jwtReq, "salt", algorithms=["HS256"])
-        
-        # def generate_request(url, params={}):
-        #     response = requests.get(url, params=params)
-        #
-        #     if response.status_code == 200:
-        #         return response.json()
-        #
-        # def get_user(params={}):
-        #     res = generate_request('http://localhost:3000/api/user/', params)
-        #     if res:
-        #         user = str(res)
-        #         return print(user)
+        jwtReqWithBearer = request.headers.get('authorization')
+        role_user = None
 
-            # return {}
+        if (not (jwtReqWithBearer == None)):
+            jwtNotBearer = jwtReqWithBearer.replace("Bearer ", "")
+            jwtDecode = jwt.decode(jwtNotBearer, "salt", algorithms=["HS256"])
+            role_user = jwtDecode.get('roles')
+            print(role_user)
 
+        if ((url == "/mercado/empresa/") & (role_user == "superadmin") | (role_user == "mercadoadmin")):
+            pass
+        else:
+            return JsonResponse({"msg": "no tienes permisos suficiente"}, safe=False, status=status.HTTP_403_FORBIDDEN)
