@@ -1,4 +1,5 @@
 const User = require("../models/UserModel");
+const bcrypt = require("bcrypt")
 
 module.exports = {
     async find(req, res, next) {
@@ -11,6 +12,10 @@ module.exports = {
             next();
         }
     },
+    async index(req, res) {
+		const user = await User.findAll();
+		return res.status(200).json(user);
+	},
     async update(req, res) {
         
         let passwordEncrypt = bcrypt.hashSync(req.body.password, 10)
@@ -22,6 +27,16 @@ module.exports = {
         req.userC.save().then(userC => {
             res.json(userC);
         })
+
+    },
+    async updateRole(req, res) {
+        
+        // req.userC.password = passwordEncrypt;
+        // req.userC.email = req.body.email;
+
+        // req.userC.save().then(userC => {
+        //     res.json(userC);
+        // })
 
     },
 }

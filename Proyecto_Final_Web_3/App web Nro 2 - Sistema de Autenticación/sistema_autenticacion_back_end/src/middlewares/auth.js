@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require("../models/UserModel");
+const VarEnv = require('../config/VarEnv')
 
 module.exports = (req, res, next) => {
     if (!req.headers.authorization) {
@@ -7,7 +8,7 @@ module.exports = (req, res, next) => {
     } else {
         let token = req.headers.authorization.split(' ')[1];
 
-        jwt.verify(token, 'salt', (err, decoded) => {
+        jwt.verify(token, VarEnv.auth.salt, (err, decoded) => {
             if (err) {
                 res.status(500).json({msg: 'Ha ocurrido un problema al decodificar el token',err});
             } else {

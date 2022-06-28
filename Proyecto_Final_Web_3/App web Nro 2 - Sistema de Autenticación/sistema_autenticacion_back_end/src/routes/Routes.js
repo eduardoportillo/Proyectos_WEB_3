@@ -4,12 +4,19 @@ const router = express.Router();
 const auth = require('../middlewares/auth');
 const AuthController = require("../controllers/AuthController");
 const UserController = require('../controllers/UserController');
-const PostPolicy = require('../policies/PostPolicy');
+const Policy = require('../policies/Policy');
 
 //Auth
 router.post('/api/singin/', AuthController.singIn);
 router.post('/api/signup/', AuthController.singUp);
 
 //User
-router.patch("/api/user/:userId",auth, UserController.find, PostPolicy.update, UserController.update)
+router.get("/api/user/", UserController.index)
+// router.get("/api/user/",auth, Policy.show, UserController.index)
+router.patch("/api/user/:userId",auth, UserController.find, Policy.update, UserController.update)
+
+//update role - user
+// router.put("/api/user/:userId",auth, UserController.find, Policy.update, UserController.update)
+
+
 module.exports = router;
