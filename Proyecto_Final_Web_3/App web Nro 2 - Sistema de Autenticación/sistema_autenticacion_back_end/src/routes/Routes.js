@@ -11,8 +11,7 @@ router.post('/api/singin/', AuthController.singIn);
 router.post('/api/signup/', AuthController.singUp);
 
 //User
-router.get("/api/user/", UserController.index)
-// router.get("/api/user/",auth, Policy.show, UserController.index)
+router.get("/api/user/",auth, Policy.index, UserController.index)
 router.patch("/api/user/:userId",auth, UserController.find, Policy.update, UserController.update)
 
 //update role - user

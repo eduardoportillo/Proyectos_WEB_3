@@ -26,7 +26,8 @@ module.exports = {
                         // let rolesArray = Array.from(user.roles)
                         let roleUser = user.roles[0].dataValues.role
                         let token = jwt.sign(
-                            {
+                            {   
+                                userId: user.id,
                                 name: user.username,
                                 email: user.email,
                                 roles: roleUser
