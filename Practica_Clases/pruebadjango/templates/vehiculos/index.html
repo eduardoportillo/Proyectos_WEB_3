@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tbody>
+
+    {% for vehiculo in object_list %}
+        <tr>
+            <td>{{ vehiculo.pk }}</td>
+            <td>{{ vehiculo.marca_modelo }}</td>
+            <td>{{ vehiculo.tipo }}</td>
+            <td>{{ vehiculo.persona_id }}</td>
+{#            <td><a href="{% url 'personas:vehiculos.edit' vehiculo.pk %}">Editar</a></td>#}
+{#            <td>#}
+{#                <a onclick="return confirm('Está seguro que desea eliminar?')"#}
+{#                   href="{% url 'personas:vehiculos.delete' vehiculo.pk %}">Eliminar</a>#}
+{#            </td>#}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

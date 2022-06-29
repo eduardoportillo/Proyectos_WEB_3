@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tbody>
+
+    {% for mascota in mascotas_list %}
+        <tr>
+            <td>{{ mascota.pk }}</td>
+            <td>{{ mascota.nombre }}</td>
+            <td>{{ mascota.tipo }}</td>
+            <td>{{ mascota.persona_id }}</td>
+            <td><a href="{% url 'personas:mascotas.edit' mascota.pk %}">Editar</a></td>
+            <td>
+                <a onclick="return confirm('Está seguro que desea eliminar?')"
+                   href="{% url 'personas:mascotas.delete' mascota.pk %}">Eliminar</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

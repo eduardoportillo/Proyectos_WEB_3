@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f654b58-e00e-4a26-9ef4-e5b4d53a5522" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/practicaauthbasic/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/practicaauthbasic/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/practicaauthbasic/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/practicaauthbasic/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/api/persona_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/practicaauthbasic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/practicaauthbasic/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/practicaauthbasic/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/practicaauthbasic/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/practicaauthbasic/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/api/persona_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/pruebaauth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/basic/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/practicaauthbasic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/practicaauthbasic/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/practicaauthbasic/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/practicaauthbasic/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/practicaauthbasic/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/api/persona_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/pruebaauth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Auth Rest Django/oauth/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/practicafsm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/api/cliente_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/api/pedidos_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/api/producto_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/api/restaurante_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/migrations/0002_producto_nombre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/migrations/0003_remove_pedido_razon_pedido_razon_cancelacion_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/chofer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/cliente.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/detalle_pedido.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/pedido.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/producto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/models/restaurante.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedidos/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practicafsm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practicafsm/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practicafsm/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practicafsm/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practicafsm/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/.yo-rc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/config/gateway.config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/config/models/applications.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/config/models/credentials.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/config/models/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/config/system.config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebaApigateway/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/forms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/forms/mascota_form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/0002_alter_persona_genero.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/0003_mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/0004_vehiculo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/0005_alter_vehiculo_tipo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/models/mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/models/vehiculo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/views/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/views/mascota_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/views/persona_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/personas/views/vehiculo_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/pruebadjango/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/pruebadjango/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/pruebadjango/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/pruebadjango/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/pruebadjango/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/mascotas/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/mascotas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/personas/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/personas/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/personas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjango/templates/vehiculos/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/api/extra_serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/api/mascota_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/api/persona_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/api/vehiculo_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/migrations/0002_mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/migrations/0003_vehiculo_persona_vehiculos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/migrations/0004_alter_persona_vehiculos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/models/mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/models/pelicula.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/models/vehiculo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebaapp/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebadjangorest/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebadjangorest/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebadjangorest/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebadjangorest/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/pruebadjangorest/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest con throttling/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/pruebadjangorest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/1/d/1d8396cf211b5893af83c127d57e5059d1dbece9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/8/5/85e5f180ea8d5360d2b72be02365dd61c3a54576" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/8/9/895ddda2083cf29735c7c29b4f2ad281b1260cd7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/9/c/9cab7ad969b2affa6989f76d05fea562c1ae3cf1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/b/8/b83582f441dcffdf780f93d946334bb308fb8125" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/d/5/d516ea7515342256a5c95f4121bf2911fba4f791" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/api/extra_serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/api/mascota_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/api/persona_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/api/vehiculo_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/migrations/0002_mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/migrations/0003_vehiculo_persona_vehiculos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/migrations/0004_alter_persona_vehiculos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/models/mascota.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/models/persona.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/models/vehiculo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebaapp/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebadjangorest/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebadjangorest/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebadjangorest/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebadjangorest/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/pruebadjangorest/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/config/db.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/controllers/persona.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/controllers/prueba.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/models/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/models/persona.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/routes/persona.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pruebanode/routes/prueba.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/migrations/0003_alter_producto_precio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/ruta_modificacion_port_server.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/practicaauthbasic/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Auth Rest Django/apikey/pruebaauth/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/middlewares/middleware_validation_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/middlewares/middleware_validation_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/producto.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/producto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2BEqpA2JKNgInxv2HTHzwhD9wYv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Practica_Clases/practicafsm"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="practicafsm" type="Python.DjangoServer" factoryName="Django server">
+      <module name="practicafsm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f654b58-e00e-4a26-9ef4-e5b4d53a5522" name="Changes" comment="" />
+      <created>1656481772058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656481772058</updated>
+      <workItem from="1656481773385" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

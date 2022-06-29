@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form method="post" action="{% url 'personas:personas.edit' persona.id %}">
+    {% csrf_token %}
+    <div>
+        <label for="nombres">Nombres:</label>
+        <input id="nombres" type="text" value="{{ persona.nombres }}" name="nombres"/>
+    </div>
+    <div>
+        <label for="apellidos">Apellidos:</label>
+        <input id="apellidos" type="text" name="apellidos" value="{{ persona.apellidos }}"/>
+    </div>
+    <div>
+        <label for="edad">Edad:</label>
+        <input id="edad" type="number" name="edad" value="{{ persona.edad }}"/>
+    </div>
+    <div>
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input id="fecha_nacimiento" type="date" name="fecha_nacimiento"
+               value="{{ persona.fecha_nacimiento|date:'Y-m-d' }}"/>
+    </div>
+    <div>
+        <label for="ciudad">Ciudad:</label>
+        <input id="ciudad" type="text" name="ciudad" value="{{ persona.ciudad }}"/>
+    </div>
+    <div>
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+            <option value="1" {% if persona.genero == 1 %}selected{% endif %}>Masculino</option>
+            <option value="0" {% if persona.genero == 0 %}selected{% endif %}>Indefinido</option>
+            <option value="-1" {% if persona.genero == -1 %}selected{% endif %}>Femenino</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Guardar"/>
+    </div>
+</form>
+</body>
+</html>

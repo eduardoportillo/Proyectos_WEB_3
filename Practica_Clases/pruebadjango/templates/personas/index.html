@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tbody>
+
+    {% for persona in personas_list %}
+        <tr>
+            <td>{{ persona.pk }}</td>
+            <td>{{ persona.nombres }}</td>
+            <td>{{ persona.apellidos }}</td>
+            <td>{{ persona.ciudad }}</td>
+            <td>{{ persona.edad }}</td>
+            <td>{{ persona.fecha_nacimiento }}</td>
+            <td><a href="{% url 'personas:personas.edit' persona.pk %}">Editar</a></td>
+            <td>
+                <a onclick="return confirm('Está seguro que desea eliminar?')"
+                   href="{% url 'personas:personas.delete' persona.pk %}">Eliminar</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

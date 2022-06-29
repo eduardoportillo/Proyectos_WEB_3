@@ -22,9 +22,12 @@ class ValidationAuthMiddleware:
             jwt_decode = jwt.decode(jwt_not_bearer, "salt", algorithms=["HS256"])
             role_user = jwt_decode.get('roles')
 
-        if ((url == "/mercado/empresa/")
-                & (method_http_req == 'GET')
-                | (role_user == "superadmin") | (role_user == "mercadoadmin")
+        if (url == "/mercado/"):
+            pass
+
+        elif ((url == "/mercado/empresa/")
+              & (method_http_req == 'GET')
+              | (role_user == "superadmin") | (role_user == "mercadoadmin")
         ):
             pass
 
