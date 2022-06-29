@@ -11,30 +11,31 @@ class ValidationAuthMiddleware:
         response = self.get_response(request)
         return response
 
-    def process_view(self, request, view_func, view_args, view_kwargs):
+    @staticmethod
+    def process_view(request, view_func, view_args, view_kwargs):
         url = request.META.get('PATH_INFO')
-        methodHTTPReq = request.method
-        jwtReqWithBearer = request.headers.get('authorization')
+        method_http_req = request.method
+        jwt_req_with_bearer = request.headers.get('authorization')
         role_user = ""
-        if (not (jwtReqWithBearer == None)):
-            jwtNotBearer = jwtReqWithBearer.replace("Bearer ", "")
-            jwtDecode = jwt.decode(jwtNotBearer, "salt", algorithms=["HS256"])
-            role_user = jwtDecode.get('roles')
+        if not (jwt_req_with_bearer is None):
+            jwt_not_bearer = jwt_req_with_bearer.replace("Bearer ", "")
+            jwt_decode = jwt.decode(jwt_not_bearer, "salt", algorithms=["HS256"])
+            role_user = jwt_decode.get('roles')
 
         if ((url == "/mercado/empresa/")
-                & (methodHTTPReq == 'GET')
+                & (method_http_req == 'GET')
                 | (role_user == "superadmin") | (role_user == "mercadoadmin")
         ):
             pass
 
         elif ((url == "/mercado/producto/")
-              & (methodHTTPReq == 'GET')
+              & (method_http_req == 'GET')
               | (role_user == "superadmin") | (role_user == "mercadoadmin")
         ):
             pass
 
         elif ((url == "/mercado/categoria/")
-              & (methodHTTPReq == 'GET')
+              & (method_http_req == 'GET')
               | (role_user == "superadmin") | (role_user == "mercadoadmin")
         ):
             pass
