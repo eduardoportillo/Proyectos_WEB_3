@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f654b58-e00e-4a26-9ef4-e5b4d53a5522" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pruebadjangorest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/extra_serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/pedido.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/rastreo_entrega.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/policies/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/policies/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/entrega_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/pedido_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/entrega.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/sistema_entrega_back_end/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +30,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Practica_Clases/practicafsm",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Practica_Clases/practicafsm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="practicafsm" type="Python.DjangoServer" factoryName="Django server">
       <module name="practicafsm" />
@@ -68,14 +49,15 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="practicafsm.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Practica_Clases\practicafsm\venv_entrega\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="10000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -95,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656481772058</updated>
       <workItem from="1656481773385" duration="10442000" />
+      <workItem from="1656571576003" duration="1439000" />
     </task>
     <servers />
   </component>

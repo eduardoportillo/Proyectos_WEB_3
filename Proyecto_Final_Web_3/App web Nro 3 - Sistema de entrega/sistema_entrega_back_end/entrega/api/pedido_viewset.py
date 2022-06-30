@@ -31,7 +31,6 @@ class PedidoViewSet(viewsets.ModelViewSet):
             obj_entrega.latitud_origen = entrega_list['latitud_origen']
             obj_entrega.longitud_destino = entrega_list['longitud_destino']
             obj_entrega.latitud_destino = entrega_list['latitud_destino']
-            obj_entrega.estado = 1
 
             obj_entrega.pedido_id = pedido_insertada
             obj_entrega.save()
