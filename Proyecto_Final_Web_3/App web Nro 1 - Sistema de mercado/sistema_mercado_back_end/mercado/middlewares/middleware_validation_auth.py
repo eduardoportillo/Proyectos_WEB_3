@@ -1,3 +1,5 @@
+import re
+
 import jwt
 from django.http import JsonResponse
 from rest_framework import status
@@ -22,25 +24,13 @@ class ValidationAuthMiddleware:
             jwt_decode = jwt.decode(jwt_not_bearer, "salt", algorithms=["HS256"])
             role_user = jwt_decode.get('roles')
 
-        if (url == "/mercado/"):
-            pass
+        url_regex = re.compile("/(\w+)/(\w+)/(\d?)")
 
-        elif ((url == "/mercado/empresa/")
+        if ((bool(url_regex.match(url)))
               & (method_http_req == 'GET')
               | (role_user == "superadmin") | (role_user == "mercadoadmin")
         ):
             pass
 
-        elif ((url == "/mercado/producto/")
-              & (method_http_req == 'GET')
-              | (role_user == "superadmin") | (role_user == "mercadoadmin")
-        ):
-            pass
-
-        elif ((url == "/mercado/categoria/")
-              & (method_http_req == 'GET')
-              | (role_user == "superadmin") | (role_user == "mercadoadmin")
-        ):
-            pass
         else:
             return JsonResponse({"msg": "no tiene permisos suficiente"}, safe=False, status=status.HTTP_403_FORBIDDEN)

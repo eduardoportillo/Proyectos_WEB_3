@@ -17,7 +17,7 @@ app.use(cors());
 app.use(require('./routes/Routes'));
 
 //Http Server
-const PORT = 3000;
+const PORT = 6000;
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}/`);
 });

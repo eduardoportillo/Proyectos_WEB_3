@@ -12,9 +12,10 @@ module.exports = {
         User.findOne({
             where: {
                 email: email,
-            },include:{
-                model: Role
-            }
+            },
+            include: {
+                model: Role,
+            },
         })
             .then(user => {
                 if (!user) {
@@ -24,23 +25,30 @@ module.exports = {
                 } else {
                     if (bcrypt.compareSync(password, user.password)) {
                         // let rolesArray = Array.from(user.roles)
-                        let roleUser = user.roles[0].dataValues.role
-                        let token = jwt.sign(
-                            {   
-                                userId: user.id,
-                                name: user.username,
-                                email: user.email,
-                                roles: roleUser
-                            },
-                            VarEnv.auth.salt,
-                            {
-                                expiresIn: VarEnv.auth.expiresIn,
-                            }
-                        );
-                        res.json({
-                            // user: user,
-                            token: token,
-                        });
+                        let roleUser = user.roles[0]?.dataValues.role;
+                        if(roleUser){
+                            let token = jwt.sign(
+                                {
+                                    userId: user.id,
+                                    name: user.username,
+                                    email: user.email,
+                                    roles: roleUser,
+                                },
+                                VarEnv.auth.salt,
+                                {
+                                    expiresIn: VarEnv.auth.expiresIn,
+                                }
+                            );
+                            res.json({
+                                // user: user,
+                                token: token,
+                            });
+                        }else{
+                            res.status(500).json({
+                                msg: 'Rol no asignado, Todo usuario debe tener un rol',
+                            });
+                        }
+                        
                     } else {
                         res.status(401).json({
                             msg: 'contraseña incorrecta',
@@ -49,14 +57,16 @@ module.exports = {
                 }
             })
             .catch(err => {
+                console.log(err)
                 res.status(500).json({msg: err});
             });
     },
 
-    singUp(req, res) {
+    async singUp(req, res) {
         let passwordEncrypt = bcrypt.hashSync(req.body.password, 10);
+        let useraux;
 
-        User.create({
+        await User.create({
             username: req.body.username,
             password: passwordEncrypt,
             email: req.body.email,
@@ -65,13 +75,26 @@ module.exports = {
                 let token = jwt.sign({user: user}, VarEnv.auth.salt, {
                     expiresIn: VarEnv.auth.expiresIn,
                 });
+
+                useraux = user;
                 res.json({
                     user: user,
                     token: token,
                 });
             })
             .catch(err => {
-                res.status(500).json({msg: err.errors[0].message});
+                console.log(err);
+                res.status(500).json({msg: err.errors});
             });
+
+        // Asignando Rol "usuariocomun" por default
+        if(useraux){
+            await Role.findOne({where: {role: 'usuariocomun'}}).then(role => {
+                useraux.addRole(role);
+            }).catch(err => {
+                res.status(500).json({msg: err.errors});
+            });
+        }
+        
     },
 };

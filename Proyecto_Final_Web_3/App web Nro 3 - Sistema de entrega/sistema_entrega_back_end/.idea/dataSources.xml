@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="9cd01805-7341-41d1-b3da-1e814be4bfb9">
+    <data-source source="LOCAL" name="db" uuid="8ba7e808-1f72-44f9-b4c3-371df5a2b746">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 1 - Sistema de mercado\sistema_mercado_back_end\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 3 - Sistema de entrega\sistema_entrega_back_end\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
@@ -13,13 +13,13 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Django default" uuid="374e094b-23d0-43c7-80ae-3d4f71033457">
+    <data-source source="LOCAL" name="Django default" uuid="d40eae9d-d024-44a4-a4d5-05ba873b2a63">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
-      <remarks>$PROJECT_DIR$/sistema_mercado_back_end/settings.py</remarks>
+      <remarks>$PROJECT_DIR$/sistema_entrega_back_end/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 1 - Sistema de mercado\sistema_mercado_back_end\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 3 - Sistema de entrega\sistema_entrega_back_end\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

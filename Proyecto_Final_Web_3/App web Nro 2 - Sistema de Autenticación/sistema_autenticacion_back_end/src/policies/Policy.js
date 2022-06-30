@@ -10,19 +10,11 @@ module.exports = {
         }
     },
 
-    show(req, res, next){
-        if(req.user.id === req.user.userId || User.isAdmin(req.user.roles)){
+    ValidatePermission(req, res, next){
+        if(req.user.id === +req.params.userId || User.isAdmin(req.user.roles)){
             next();
         }else{
-            res.status(403).json({msg: "No estas autorizado para correr User Show"})
+            res.status(403).json({msg: `${req.user.email} No estas autorizado para correr esta Ruta`})
         }
     },
-
-    update(req, res, next){
-        if(req.user.id === req.user.userId || User.isAdmin(req.user.roles)){
-            next();
-        }else{
-            res.status(403).json({msg: "No estas autorizado para correr User Update"})
-        }
-    }
 }
