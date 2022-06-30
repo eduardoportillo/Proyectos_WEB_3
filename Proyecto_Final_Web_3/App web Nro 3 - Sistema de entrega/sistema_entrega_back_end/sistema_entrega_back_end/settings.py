@@ -36,6 +36,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom middleware
+    'entrega.middlewares.ValidationAuthMiddleware',
 ]
 
 ROOT_URLCONF = 'sistema_entrega_back_end.urls'

@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f654b58-e00e-4a26-9ef4-e5b4d53a5522" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/migrations/0004_rename_latitud_empresa_latitude_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/rastreo_entrega_viewset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/empresa.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/empresa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/entrega_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/api/entrega_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/entrega.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/entrega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/rastreo_entrega.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/models/rastreo_entrega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656481772058</updated>
       <workItem from="1656481773385" duration="10442000" />
-      <workItem from="1656571576003" duration="1439000" />
+      <workItem from="1656571576003" duration="5048000" />
     </task>
     <servers />
   </component>

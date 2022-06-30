@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/dataSources/59835ab1-479c-4d96-a3b6-cd9738c2872f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/migrations/0004_rename_latitud_empresa_latitude_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/api/rastreo_entrega_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/middlewares/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/middlewares/middleware_validation_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/migrations/0002_remove_rastreoentrega_entrega_update_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/migrations/0003_alter_entrega_estado.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/empresa.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/models/empresa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/models/entrega.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/entrega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/models/rastreo_entrega.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/rastreo_entrega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +66,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Practica_Clases/practicafsm",
+    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 3 - Sistema de entrega\sistema_entrega_back_end\entrega" />
       <recent name="C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 3 - Sistema de entrega\sistema_entrega_back_end\entrega\api" />
       <recent name="C:\Users\portillo\Documents\GitHub\Proyectos_WEB_3\Proyecto_Final_Web_3\App web Nro 3 - Sistema de entrega\sistema_entrega_back_end" />
     </key>
@@ -97,7 +117,8 @@
       <workItem from="1656472729644" duration="20059000" />
       <workItem from="1656543667007" duration="1658000" />
       <workItem from="1656567290449" duration="2230000" />
-      <workItem from="1656569566560" duration="2409000" />
+      <workItem from="1656569566560" duration="9584000" />
+      <workItem from="1656586071472" duration="17537000" />
     </task>
     <servers />
   </component>

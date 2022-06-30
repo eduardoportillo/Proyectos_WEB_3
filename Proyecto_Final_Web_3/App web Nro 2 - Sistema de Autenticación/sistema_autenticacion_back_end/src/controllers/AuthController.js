@@ -30,7 +30,7 @@ module.exports = {
                             let token = jwt.sign(
                                 {
                                     userId: user.id,
-                                    name: user.username,
+                                    username: user.username,
                                     email: user.email,
                                     roles: roleUser,
                                 },

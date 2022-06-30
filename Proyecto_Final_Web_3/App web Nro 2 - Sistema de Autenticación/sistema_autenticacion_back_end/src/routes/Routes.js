@@ -8,7 +8,7 @@ const Policy = require('../policies/Policy');
 const RoleController = require('../controllers/RoleController');
 
 //Auth
-router.post('/api/singin/', AuthController.singIn);
+router.post('/api/login/', AuthController.singIn);
 router.post('/api/signup/', AuthController.singUp);
 
 //User

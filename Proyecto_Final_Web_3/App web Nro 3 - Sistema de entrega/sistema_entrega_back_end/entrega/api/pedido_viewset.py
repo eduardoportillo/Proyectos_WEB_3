@@ -25,12 +25,11 @@ class PedidoViewSet(viewsets.ModelViewSet):
             id_pedido = serializer.data['tracking_id']
             pedido_insertada = Pedido.objects.filter(pk=id_pedido).get()
 
-            # for entrega in entrega_list:
             obj_entrega = Entrega()
-            obj_entrega.longitud_origen = entrega_list['longitud_origen']
-            obj_entrega.latitud_origen = entrega_list['latitud_origen']
-            obj_entrega.longitud_destino = entrega_list['longitud_destino']
-            obj_entrega.latitud_destino = entrega_list['latitud_destino']
+            obj_entrega.longitude_origen = entrega_list['longitude_origen']
+            obj_entrega.latitude_origen = entrega_list['latitude_origen']
+            obj_entrega.longitude_destino = entrega_list['longitude_destino']
+            obj_entrega.latitude_destino = entrega_list['latitude_destino']
 
             obj_entrega.pedido_id = pedido_insertada
             obj_entrega.save()
