@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Practica_Clases/pruebadjangorest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega/models/entrega.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega/models/pedido.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega/models/rastreo_entrega.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrega/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Practica_Clases/practicafsm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/middlewares/middleware_validation_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/middlewares/middleware_validation_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/sistema_mercado_back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/policies/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/policies/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema_entrega_back_end/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema_entrega_back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistema_entrega_back_end/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +95,7 @@
       <updated>1656472714139</updated>
       <workItem from="1656472729644" duration="20059000" />
       <workItem from="1656543667007" duration="1658000" />
-      <workItem from="1656567290449" duration="1611000" />
+      <workItem from="1656567290449" duration="2230000" />
     </task>
     <servers />
   </component>

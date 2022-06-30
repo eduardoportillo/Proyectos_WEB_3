@@ -22,7 +22,7 @@ class PedidoViewSet(viewsets.ModelViewSet):
 
         if request.data['entrega_obj ']:
             entrega_list = request.data['entrega_obj ']
-            id_pedido = serializer.data['id']
+            id_pedido = serializer.data['tracking_id']
             pedido_insertada = Pedido.objects.filter(pk=id_pedido).get()
 
             # for entrega in entrega_list:
