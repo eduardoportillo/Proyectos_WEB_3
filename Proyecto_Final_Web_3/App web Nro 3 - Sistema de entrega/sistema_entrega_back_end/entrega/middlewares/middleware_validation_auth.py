@@ -3,6 +3,7 @@ import re
 import jwt
 from django.http import JsonResponse
 from rest_framework import status
+import json
 
 
 class ValidationAuthMiddleware:
@@ -25,7 +26,7 @@ class ValidationAuthMiddleware:
             role_user = jwt_decode.get('roles')
 
         url_regex = re.compile("/(\w+)/(\w+)/(\d?)")
-        url_update = re.compile("/entrega/entrega/(\d+)")
+
         # if ((url == '/entrega/pedido/')
         #         & (method_http_req == 'POST')
         #         | (role_user == "superadmin") | (role_user == "entregaadmin")):
@@ -41,16 +42,6 @@ class ValidationAuthMiddleware:
         #     request._body = bytes_json
         #     pass
 
-        if ((bool(url_update.match(url)))
-                & (method_http_req == 'PUT')
-                | (method_http_req == 'PATCH')
-                & (role_user == "superadmin")
-        ):
-            pass
-        else:
-            return JsonResponse({"msg": "porfavor usar FMS para actualizar estado o ser usuario superadmin"},
-                                safe=False, status=status.HTTP_403_FORBIDDEN)
-
         if ((bool(url_regex.match(url)))
                 & (method_http_req == 'GET')
                 | (role_user == "superadmin") | (role_user == "entregaadmin")
@@ -58,4 +49,5 @@ class ValidationAuthMiddleware:
             pass
 
         else:
-            return JsonResponse({"msg": "no tiene permisos suficiente"}, safe=False, status=status.HTTP_403_FORBIDDEN)
+            return JsonResponse({"msg": "no tiene permisos suficiente o si desea actualizar use FMS"}, safe=False,
+                                status=status.HTTP_403_FORBIDDEN)
