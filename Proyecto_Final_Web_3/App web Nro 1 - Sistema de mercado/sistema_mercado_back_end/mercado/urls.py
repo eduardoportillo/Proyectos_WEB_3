@@ -13,3 +13,4 @@ router.register(r'categoria', CategoriaViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+

@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/Action/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/Action/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/gender/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/gender/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/movie/create/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/movie/create/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/proyecto_4_movie_node.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/proyecto_4_movie_node.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/controllers/movieController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/controllers/movieController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/routes/Routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/Back-End.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto_3_Movie/Back-End/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/api/pedido_detalle_viewset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entrega/models/pedido_detalle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/producto_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/producto_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/migrations/0002_remove_rastreoentrega_entrega_update_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/migrations/0003_alter_entrega_estado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/models/pedido.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/pedido.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Proyecto_Final_Web_3/App web Nro 3 - Sistema de entrega/sistema_entrega_back_end/entrega",
+    "last_opened_file_path": "C:/Users/portillo/Documents/GitHub/Proyectos_WEB_3/Proyecto_3_Movie/Back-End",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
@@ -100,7 +118,7 @@
       <workItem from="1656543667007" duration="1658000" />
       <workItem from="1656567290449" duration="2230000" />
       <workItem from="1656569566560" duration="9584000" />
-      <workItem from="1656586071472" duration="19275000" />
+      <workItem from="1656586071472" duration="24858000" />
     </task>
     <servers />
   </component>

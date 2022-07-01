@@ -1,7 +1,7 @@
 from rest_framework import serializers, viewsets, status
 from rest_framework.response import Response
 
-from entrega.models import Pedido, Entrega
+from entrega.models import Pedido, Entrega, PedidoDetalle
 
 
 class PedidoSerializer(serializers.ModelSerializer):
@@ -33,7 +33,19 @@ class PedidoViewSet(viewsets.ModelViewSet):
 
             obj_entrega.pedido_id = pedido_insertada
             obj_entrega.save()
+
+            pedido_detalle_list = request.data['pedido_detalle_obj']
+            obj_pedido_detalle = PedidoDetalle()
+
+            for pedido in pedido_detalle_list:
+                obj_pedido_detalle.descripcion = pedido['descripcion']
+                obj_pedido_detalle.cantidad = pedido['cantidad']
+                obj_pedido_detalle.precio = pedido['precio']
+                obj_pedido_detalle.pedido_id = pedido_insertada
+                obj_pedido_detalle.producto_id = pedido['producto_id']
+                obj_pedido_detalle.save()
+
             return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
-        no_entrega_obj = {"error": "you didn't pass a entrega_obj"}
+        no_entrega_obj = {"error": "you didn't pass a entrega_obj o pedido_detalle_obj"}
         return Response(no_entrega_obj, status=status.HTTP_400_BAD_REQUEST, headers=headers)
