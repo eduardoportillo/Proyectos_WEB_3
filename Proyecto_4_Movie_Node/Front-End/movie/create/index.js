@@ -92,6 +92,7 @@ class index extends scomponent {
                 name: name.value,
                 description: description.value,
                 image: image.files[0],
+                genders: formatGenders,
             }).then(data => {
                 window.location.href = '/index.html';
             });

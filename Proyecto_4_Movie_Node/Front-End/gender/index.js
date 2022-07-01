@@ -4,38 +4,63 @@ require('/Action/index.js');
 require('/components/MovieItem');
 
 class index extends scomponent {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
 
-		this.id = getParam('id');
-		this.name = getParam('name');
+        this.idGender = getParam('id');
+        parseInt(this.idGender);
+        this.name = getParam('name');
 
-		this.Barra = new Barra({title: 'Gender ' + this.name});
-		this.Footer = new Footer({});
-	}
+        this.Barra = new Barra({title: 'Gender ' + this.name});
+        this.Footer = new Footer({});
+    }
 
-	onLoad() {
-		this.loadMovies();
-	}
+    onLoad() {
+        this.loadMovies();
+    }
+    
+    loadMovies() {
+        
+        Action.getGenderById(this.idGender)
+            .then(data => {
+                let listaItems = document.getElementById('listaItems');
 
-	loadMovies() {
-		Action.getMoviesGender(this.id)
-			.then(data => {
-				let listaItems = document.getElementById('listaItems');
-				for (const element of data) {
-					var movies = element.movies;
-					for (const movie of movies) {
-						movies.image = HTTP.__URL_API + movie.image;
-						listaItems.innerHTML += new MovieItem({data: movie});
-					}
-				}
-			})
-			.catch(err => {
-				console.log(err);
-			});
-	}
-	render() {
-		return `
+                listaItems.innerHTML += `
+                <Button id="UpdateGender" 
+                style="color: white;
+                    background-color: blue;"
+                onClick="redirectUpdateGender(${this.idGender})" 
+                >Actualizar Genero</Button>
+
+                <Button 
+                id="DeleteGender" 
+                style="color: white;
+                    background-color: red;"
+                onClick="deleteGender(${this.idGender})"  
+                >Eliminar Genero</Button>`
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        Action.getMoviesGender(this.idGender)
+            .then(data => {
+                let listaItems = document.getElementById('listaItems');
+                let listaGender = document.getElementById('listaGender');
+
+                for (const element of data) {
+                    var movies = element.movies;
+                    for (const movie of movies) {
+                        movies.image = HTTP.__URL_API + movie.image;
+                        listaItems.innerHTML += new MovieItem({data: movie});
+                    }
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }
+    render() {
+        return `
                 ${this.Barra}
                  <div id="listaItems" style="
                  justify-content: center;
@@ -45,6 +70,13 @@ class index extends scomponent {
                 ${this.Footer}
                 
         `;
-	}
+    }
+}
+function redirectUpdateGender(idGender){
+    window.location.href =`/gender/create/index.html?idGender=${idGender}`;
+}
+
+function deleteGender(idGender){
+    Action.deleteGender({idGender})
 }
 smodule.connect(index);

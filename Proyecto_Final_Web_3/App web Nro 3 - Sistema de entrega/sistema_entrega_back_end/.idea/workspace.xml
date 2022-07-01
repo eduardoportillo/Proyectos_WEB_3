@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="" />
+    <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/Action/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/Action/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/gender/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/gender/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/movie/create/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Front-End/movie/create/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/proyecto_4_movie_node.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/proyecto_4_movie_node.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/controllers/movieController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/controllers/movieController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Proyecto_4_Movie_Node/Practico_4_Movie_Node/src/routes/Routes.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +100,7 @@
       <workItem from="1656543667007" duration="1658000" />
       <workItem from="1656567290449" duration="2230000" />
       <workItem from="1656569566560" duration="9584000" />
-      <workItem from="1656586071472" duration="18517000" />
+      <workItem from="1656586071472" duration="19275000" />
     </task>
     <servers />
   </component>

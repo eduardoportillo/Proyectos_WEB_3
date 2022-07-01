@@ -8,7 +8,7 @@ class Action {
     }
 
     // -----> TOKEN
-    static async token({ username, password }) {
+    static async token({username, password}) {
         return new Promise((resolve, reject) => {
             HTTP.POST('/api/token/', {
                 email: username,
@@ -16,7 +16,7 @@ class Action {
             }).then(data => {
                 if (!data.token) {
                     this.__TOKEN = '';
-                    reject({ message: data.msg });
+                    reject({message: data.msg});
                 } else {
                     this.__TOKEN = data.token;
                     localStorage.setItem('JWT', JSON.stringify(data.token));
@@ -51,10 +51,10 @@ class Action {
                 });
         });
     }
-    static async createMovie({ name, description, image, genders }) {
+    static async createMovie({name, description, image, genders}) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
-                reject({ message: 'no token' });
+                reject({message: 'no token'});
                 return;
             }
             const formData = new FormData();
@@ -76,7 +76,7 @@ class Action {
     static async updateMovie(movie) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
-                reject({ message: 'no token' });
+                reject({message: 'no token'});
                 return;
             }
             const formData = new FormData();
@@ -89,10 +89,16 @@ class Action {
             if (movie.image) {
                 formData.append('image', movie.image);
             }
-            // formData.append('genders', JSON.stringify(genders));
-            // formData.append("genders", JSON.stringify({ "G1": 1, "G2": 2,  "G3": 3}));
+            if (movie.genders) {
+                formData.append('genders', JSON.stringify(movie.genders));
+            }
 
-            HTTP.MULTIPART(`/entidades/movie/${movie.id}`, formData, this.__TOKEN, 'PATCH')
+            HTTP.MULTIPART(
+                `/entidades/movie/${movie.id}`,
+                formData,
+                this.__TOKEN,
+                'PATCH'
+            )
                 .then(data => {
                     resolve(data);
                 })
@@ -105,7 +111,7 @@ class Action {
     static async deleteMovie(id) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
-                reject({ message: 'no token' });
+                reject({message: 'no token'});
                 return;
             }
             HTTP.DELETE(`/entidades/movie/${id}/`, this.__TOKEN)
@@ -129,11 +135,22 @@ class Action {
                 });
         });
     }
+    static async getGenderById(idGender) {
+        return new Promise((resolve, reject) => {
+            HTTP.GETBYTOKEN(`/entidades/gender/${idGender}`, this.__TOKEN)
+                .then(data => {
+                    resolve(data);
+                })
+                .catch(err => {
+                    reject(err);
+                });
+        });
+    }
 
-    static async createGender({ name }) {
+    static async createGender({name}) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
-                reject({ message: 'no token' });
+                reject({message: 'no token'});
                 return;
             }
             const data = {
@@ -150,11 +167,48 @@ class Action {
         });
     }
 
+    static async updateGender({name}) {
+        return new Promise((resolve, reject) => {
+            if (!this.__TOKEN) {
+                reject({message: 'no token'});
+                return;
+            }
+            const data = {
+                name: name,
+            };
+
+            HTTP.PUT(`/entidades/gender/${id}/`, data, this.__TOKEN)
+                .then(data => {
+                    resolve(data);
+                })
+                .catch(err => {
+                    reject(err);
+                });
+        });
+    }
+
+    static async deleteGender({idGender}) {
+        return new Promise((resolve, reject) => {
+            if (!this.__TOKEN) {
+                reject({message: 'no token'});
+                return;
+            }
+
+            HTTP.DELETE(`/entidades/gender/${idGender}/`, this.__TOKEN)
+                .then(data => {
+                    resolve(data);
+                })
+                .catch(err => {
+                    reject(err);
+                });
+        });
+    }
+
     // -----> MOVIE_GENDER
     static async getMoviesGender(id) {
         return new Promise((resolve, reject) => {
             if (!this.__TOKEN) {
-                reject({ message: 'no token' });
+                reject({message: 'no token'});
                 return;
             }
             HTTP.GET(`/entidades/movie-gender/${id}/list/`, this.__TOKEN)
