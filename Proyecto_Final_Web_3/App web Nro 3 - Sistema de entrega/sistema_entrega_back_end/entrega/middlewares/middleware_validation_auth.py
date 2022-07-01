@@ -27,10 +27,8 @@ class ValidationAuthMiddleware:
 
         url_regex = re.compile("/(\w+)/(\w+)/(\d?)")
 
-        # if ((url == '/entrega/pedido/')
-        #         & (method_http_req == 'POST')
-        #         | (role_user == "superadmin") | (role_user == "entregaadmin")):
-        #
+        if ((url == '/entrega/pedido/') & (method_http_req == 'POST')):
+            return
         #     json_new_body = json.loads(request.body)
         #     json_new_body["usuario_id"] = jwt_decode["userId"]
         #     json_new_body["username"] = jwt_decode["username"]

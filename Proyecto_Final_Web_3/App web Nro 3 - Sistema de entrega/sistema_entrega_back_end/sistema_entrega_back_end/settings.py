@@ -43,6 +43,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ["*"]
 
 ROOT_URLCONF = 'sistema_entrega_back_end.urls'
 

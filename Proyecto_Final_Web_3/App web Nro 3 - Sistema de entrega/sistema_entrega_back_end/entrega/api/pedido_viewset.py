@@ -20,8 +20,8 @@ class PedidoViewSet(viewsets.ModelViewSet):
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
 
-        if request.data['entrega_obj ']:
-            entrega_list = request.data['entrega_obj ']
+        if request.data['entrega_obj']:
+            entrega_list = request.data['entrega_obj']
             id_pedido = serializer.data['tracking_id']
             pedido_insertada = Pedido.objects.filter(pk=id_pedido).get()
 
