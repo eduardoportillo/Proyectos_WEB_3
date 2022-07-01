@@ -9,6 +9,7 @@ class PedidoDetalleSerializer(serializers.ModelSerializer):
     class Meta:
         model = PedidoDetalle
         fields = '__all__'
+        depth = 1
 
 class PedidoDetalleViewSet(viewsets.ModelViewSet):
     serializer_class = PedidoDetalleSerializer

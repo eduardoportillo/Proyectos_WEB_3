@@ -26,11 +26,7 @@ class index extends scomponent {
                 let listaItems = document.getElementById('listaItems');
 
                 listaItems.innerHTML += `
-                <Button id="UpdateGender" 
-                style="color: white;
-                    background-color: blue;"
-                onClick="redirectUpdateGender(${this.idGender})" 
-                >Actualizar Genero</Button>
+               
 
                 <Button 
                 id="DeleteGender" 

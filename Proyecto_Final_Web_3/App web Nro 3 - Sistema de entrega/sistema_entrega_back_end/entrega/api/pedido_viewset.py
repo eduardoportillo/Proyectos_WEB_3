@@ -1,6 +1,8 @@
 from rest_framework import serializers, viewsets, status
+from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from entrega.api.pedido_detalle_viewset import PedidoDetalleSerializer
 from entrega.models import Pedido, Entrega, PedidoDetalle
 
 
@@ -9,6 +11,7 @@ class PedidoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pedido
         fields = '__all__'
+        depth = 1
 
 class PedidoViewSet(viewsets.ModelViewSet):
     serializer_class = PedidoSerializer
@@ -49,3 +52,11 @@ class PedidoViewSet(viewsets.ModelViewSet):
 
         no_entrega_obj = {"error": "you didn't pass a entrega_obj o pedido_detalle_obj"}
         return Response(no_entrega_obj, status=status.HTTP_400_BAD_REQUEST, headers=headers)
+
+    @action(detail=True, methods=['get'], url_path='pedidobyuser')
+    def getbyempresa(self, request, pk):
+        list_pedidoByusuario = Pedido.objects.filter(usuario_id=pk)
+        # list_pedidoByusuario = PedidoDetalle.objects.filter(pedido_id=pk)
+
+        serializer = PedidoSerializer(list_pedidoByusuario, many=True)
+        return Response(serializer.data)

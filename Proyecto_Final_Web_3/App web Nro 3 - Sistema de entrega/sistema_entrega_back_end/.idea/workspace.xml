@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrega/api/pedido_detalle_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_detalle_viewset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/middlewares/middleware_validation_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/middlewares/middleware_validation_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sistema_entrega_back_end/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <workItem from="1656543667007" duration="1658000" />
       <workItem from="1656567290449" duration="2230000" />
       <workItem from="1656569566560" duration="9584000" />
-      <workItem from="1656586071472" duration="26570000" />
+      <workItem from="1656586071472" duration="31978000" />
     </task>
     <servers />
   </component>
