@@ -4,6 +4,7 @@ from rest_framework.decorators import action
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 
+from entrega.api.rastreo_entrega_viewset import RastreoEntregaSerializer
 from entrega.models import Entrega, RastreoEntrega
 
 
@@ -15,6 +16,13 @@ class EntregaSerializer(serializers.ModelSerializer):
 class EntregaViewSet(viewsets.ModelViewSet):
     serializer_class = EntregaSerializer
     queryset = Entrega.objects.all()
+
+    @action(detail=True, methods=['get'], url_path='rastreo')
+    def getbyentrega(self, request, pk):
+        list_rastreo_by_entrega = RastreoEntrega.objects.filter(entrega_id=pk)
+
+        serializer = RastreoEntregaSerializer(list_rastreo_by_entrega, many=True)
+        return Response(serializer.data)
 
     @action(detail=True, methods=['post'], url_path='pedidopendiente', name='Estado Pendiente')
     def envio_pendiente(self, request, pk=None):

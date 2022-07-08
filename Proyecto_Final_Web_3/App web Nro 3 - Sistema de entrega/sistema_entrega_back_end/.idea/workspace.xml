@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/producto_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/producto_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/RoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/RoleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/src/routes/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8ba7e808-1f72-44f9-b4c3-371df5a2b746.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/entrega_viewset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/api/pedido_viewset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/middlewares/middleware_validation_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/middlewares/middleware_validation_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrega/models/entrega.py" beforeDir="false" afterPath="$PROJECT_DIR$/entrega/models/entrega.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +99,7 @@
       <workItem from="1656569566560" duration="9584000" />
       <workItem from="1656586071472" duration="31978000" />
       <workItem from="1657009849045" duration="4069000" />
-      <workItem from="1657258724312" duration="4855000" />
+      <workItem from="1657258724312" duration="6167000" />
     </task>
     <servers />
   </component>
@@ -134,6 +122,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/entrega/api/entrega_viewset.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
