@@ -9,8 +9,6 @@ class ProductoSerializers(serializers.ModelSerializer):
     class Meta:
         model = Producto
         fields = '__all__'
-        # depth = 1
-
 
 class ProductoViewSet(viewsets.ModelViewSet):
     serializer_class = ProductoSerializers

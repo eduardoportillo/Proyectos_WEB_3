@@ -22,7 +22,7 @@ class Entrega(models.Model):
     longitude_destino = models.TextField()
     latitude_destino = models.TextField()
 
-    estado = FSMIntegerField(choices=ESTADO_CHOICES, default=CREADO)
+    estado = FSMIntegerField(choices=ESTADO_CHOICES, default=CREADO, blank=True, null=True)
 
     pedido_id = models.ForeignKey(Pedido, related_name="pedido_entrega", on_delete=models.CASCADE)
 

@@ -24,22 +24,42 @@ module.exports = {
         return res.status(200).json(user);
     },
 
+    async show(req, res) {
+        let userC = await User.findByPk(req.params.userId);
+        return res.status(200).json(userC);
+    },
+
     async update(req, res) {
-        let passwordEncrypt = bcrypt.hashSync(req.body.password, 10);
+        if (req.body.password === undefined) {
+            return res.json({msg: 'la contraseñá no puede faltar'});
+        }else{
+            let passwordEncrypt = bcrypt.hashSync(req.body.password, 10);
+            req.userC.password = passwordEncrypt;
+        }
 
-        req.userC.username = req.body.username;
-        req.userC.password = passwordEncrypt;
-        req.userC.email = req.body.email;
+        if (req.body.username === null) {
+            return res.json({msg: 'El username no puede faltar'});
+        }else{
+            req.userC.username = req.body.username;
+        }
 
-        await req.userC.save().then(userC => {
+        if (req.body.email === null) {
+            return res.json({msg: 'El correo no puede faltar'});	
+        }else{
+            req.userC.email = req.body.email;
+        }
+
+        await req.userC.update().then(userC => {
             res.json(userC);
         });
     },
 
     async updateRole(req, res, next) {
         let role = await Role.findByPk(req.body.roleId);
+        let user = await User.findByPk(req.params.userId);
+
         if (role) {
-            await req.userC.setRoles(role);
+            await user.setRoles(role);
             return res.status(200).json({msg: 'update succes!'});
         } else {
             return res.status(500).json({msg: 'rol no pillado.'});

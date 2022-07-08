@@ -3,7 +3,6 @@ import re
 import jwt
 from django.http import JsonResponse
 from rest_framework import status
-import json
 
 
 class ValidationAuthMiddleware:
@@ -25,10 +24,27 @@ class ValidationAuthMiddleware:
             jwt_decode = jwt.decode(jwt_not_bearer, "salt", algorithms=["HS256"])
             role_user = jwt_decode.get('roles')
 
-        url_regex = re.compile("/(\w+)/(\w+)/(\d?)")
+        url_regex = re.compile("/(\w+)/(\w+)/")
+        url_regex_by_id = re.compile("/(\w+)/(\w+)/(\d?)")
+        url_fms_regex = re.compile("/(\w+)/(\w+)/(\d+)/(\w+)")
 
-        if ((url == '/entrega/pedido/') & (method_http_req == 'POST')):
+        if ((bool(url_regex.match(url))) & (method_http_req == 'POST')):
             return
+
+        if ((bool(url_fms_regex.match(url)))
+                & (method_http_req == 'POST')
+                | (role_user == "superadmin") | (role_user == "entregaadmin")):
+            return
+
+        if ((bool(url_regex_by_id.match(url)))
+                & (method_http_req == 'GET')
+                | (role_user == "superadmin") | (role_user == "entregaadmin")
+        ):
+            return
+        else:
+            return JsonResponse({"msg": "no tiene permisos suficiente o si desea actualizar use FMS"}, safe=False,
+                                status=status.HTTP_403_FORBIDDEN)
+
         #     json_new_body = json.loads(request.body)
         #     json_new_body["usuario_id"] = jwt_decode["userId"]
         #     json_new_body["username"] = jwt_decode["username"]
@@ -39,13 +55,3 @@ class ValidationAuthMiddleware:
         #
         #     request._body = bytes_json
         #     pass
-
-        if ((bool(url_regex.match(url)))
-                & (method_http_req == 'GET')
-                | (role_user == "superadmin") | (role_user == "entregaadmin")
-        ):
-            pass
-
-        else:
-            return JsonResponse({"msg": "no tiene permisos suficiente o si desea actualizar use FMS"}, safe=False,
-                                status=status.HTTP_403_FORBIDDEN)

@@ -12,7 +12,6 @@ class EntregaSerializer(serializers.ModelSerializer):
         model = Entrega
         fields = '__all__'
 
-
 class EntregaViewSet(viewsets.ModelViewSet):
     serializer_class = EntregaSerializer
     queryset = Entrega.objects.all()

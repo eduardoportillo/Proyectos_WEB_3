@@ -13,12 +13,14 @@ router.post('/api/signup/', AuthController.singUp);
 
 //User
 router.get("/api/user/",auth, Policy.index, UserController.index)
-router.patch("/api/user/update/:userId/",auth, UserController.find, Policy.ValidatePermission, UserController.update)
+router.put("/api/user/update/:userId/",auth, UserController.find, Policy.ValidatePermission, UserController.update)
+router.get("/api/user/:userId/",auth, Policy.index, UserController.show)
 
 //update User - Role
 router.patch("/api/user/role/update/:userId/",auth, UserController.find, Policy.ValidatePermission, UserController.updateRole)
 
 // Role 
+router.get("/api/role/user/:idUser",auth, Policy.index, RoleController.userRole)
 router.get("/api/role/",auth, Policy.index, RoleController.index)
 
 
