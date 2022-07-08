@@ -32,25 +32,42 @@ module.exports = {
     async update(req, res) {
         if (req.body.password === undefined) {
             return res.json({msg: 'la contraseñá no puede faltar'});
-        }else{
+        } else {
             let passwordEncrypt = bcrypt.hashSync(req.body.password, 10);
             req.userC.password = passwordEncrypt;
         }
 
         if (req.body.username === null) {
             return res.json({msg: 'El username no puede faltar'});
-        }else{
+        } else {
             req.userC.username = req.body.username;
         }
 
         if (req.body.email === null) {
-            return res.json({msg: 'El correo no puede faltar'});	
-        }else{
+            return res.json({msg: 'El correo no puede faltar'});
+        } else {
             req.userC.email = req.body.email;
         }
 
         await req.userC.update().then(userC => {
             res.json(userC);
+        });
+    },
+    async delete(req, res) {
+        if (!req.params.userId) {
+            res.status(400).send({
+                message: 'El id de la persona es requerido',
+            });
+            return;
+        }
+        const user = await User.findByPk(req.params.userId);
+        if (user == null) {
+            res.status(404).send({message: 'Persona no encontrada'});
+            return;
+        }
+        await user.destroy();
+        res.send({
+            msg: `user: id:${user.id} name:${user.name} fue eliminado`,
         });
     },
 

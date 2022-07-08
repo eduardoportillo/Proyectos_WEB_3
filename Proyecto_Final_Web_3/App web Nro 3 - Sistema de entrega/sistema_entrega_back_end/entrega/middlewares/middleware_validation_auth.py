@@ -19,6 +19,7 @@ class ValidationAuthMiddleware:
         method_http_req = request.method
         jwt_req_with_bearer = request.headers.get('authorization')
         role_user = ""
+
         if not (jwt_req_with_bearer is None):
             jwt_not_bearer = jwt_req_with_bearer.replace("Bearer ", "")
             jwt_decode = jwt.decode(jwt_not_bearer, "salt", algorithms=["HS256"])
@@ -27,6 +28,7 @@ class ValidationAuthMiddleware:
         url_regex = re.compile("/(\w+)/(\w+)/")
         url_regex_by_id = re.compile("/(\w+)/(\w+)/(\d?)")
         url_fms_regex = re.compile("/(\w+)/(\w+)/(\d+)/(\w+)")
+        url_productos_regex = re.compile("/(\w+)/(\w+)/(.*?)/(\w+)")
 
         if ((bool(url_regex.match(url))) & (method_http_req == 'POST')):
             return
@@ -34,6 +36,10 @@ class ValidationAuthMiddleware:
         if ((bool(url_fms_regex.match(url)))
                 & (method_http_req == 'POST')
                 | (role_user == "superadmin") | (role_user == "entregaadmin")):
+            return
+
+        if ((bool(url_productos_regex.match(url)))
+                & (method_http_req == 'GET')):
             return
 
         if ((bool(url_regex_by_id.match(url)))

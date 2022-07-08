@@ -15,6 +15,7 @@ router.post('/api/signup/', AuthController.singUp);
 router.get("/api/user/",auth, Policy.index, UserController.index)
 router.put("/api/user/update/:userId/",auth, UserController.find, Policy.ValidatePermission, UserController.update)
 router.get("/api/user/:userId/",auth, Policy.index, UserController.show)
+router.delete("/api/user/:userId/",auth, Policy.index, UserController.delete)
 
 //update User - Role
 router.patch("/api/user/role/update/:userId/",auth, UserController.find, Policy.ValidatePermission, UserController.updateRole)
