@@ -60,9 +60,9 @@ export default class Rastreo {
             headers: {
                 "Authorization": "Bearer " + token
             },
-        })
+        }) // TODO poner bonton en frontend para eliminar
 
-        const json = {};
+        const json = {};    
         // if (resp.status != 200 || resp.status != 204) {
             // json.status = resp.status;
             // throw json;

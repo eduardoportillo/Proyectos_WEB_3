@@ -7,7 +7,6 @@ class EmpresaSerializers(serializers.ModelSerializer):
         model = Empresa
         fields = '__all__'
 
-
 class EmpresaViewSet(viewsets.ModelViewSet):
     serializer_class = EmpresaSerializers
     queryset = Empresa.objects.all()
