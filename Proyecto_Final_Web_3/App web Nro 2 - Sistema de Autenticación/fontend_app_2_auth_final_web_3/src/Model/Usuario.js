@@ -99,7 +99,7 @@ export default class Usuario {
     }
     static async editarRol(id, obj) {
         var token = sessionStorage.getItem("token");
-        var resp = await fetch(`${Env.url_auth}/api/user/rol/update/${id}/`, {
+        var resp = await fetch(`${Env.url_auth}/api/user/role/update/${id}/`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

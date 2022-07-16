@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63a4cee1-5ec6-4a75-9ddd-f741a27b1611" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/frontend_app_1_proyecto_final_web_3/src/pages/Admin/empresa/Registro.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/frontend_app_1_proyecto_final_web_3/src/pages/Admin/empresa/Registro.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 1 - Sistema de mercado/sistema_mercado_back_end/mercado/api/empresa_viewset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/fontend_app_2_auth_final_web_3/src/Model/Usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/fontend_app_2_auth_final_web_3/src/Model/Usuario.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../App web Nro 2 - Sistema de Autenticación/sistema_autenticacion_back_end/sistema_autenticacion_proyecto_final_back_end.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fontend_app_3_auth_final_web_3/src/Model/Rastreo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fontend_app_3_auth_final_web_3/src/Model/Rastreo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -104,6 +105,8 @@
       <workItem from="1657009849045" duration="4069000" />
       <workItem from="1657258724312" duration="11422000" />
       <workItem from="1657299205892" duration="3662000" />
+      <workItem from="1657813158901" duration="2569000" />
+      <workItem from="1657921266967" duration="2108000" />
     </task>
     <servers />
   </component>

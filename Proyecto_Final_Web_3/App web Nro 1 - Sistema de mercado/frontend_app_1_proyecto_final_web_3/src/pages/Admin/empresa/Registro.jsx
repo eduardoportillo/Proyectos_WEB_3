@@ -48,7 +48,7 @@ const Registro = (props) => {
                         console.error(e);
                     })
                 } else {
-                    Model.Empresa.registro(obj).then((resp) => {
+                    Model.Empresa.registro(form).then((resp) => {
                         navigate("/admin/empresa/")
                     }).catch((e) => {
                         console.error(e);

@@ -9,7 +9,7 @@ export default class Rastreo {
                 'Content-Type': 'application/json',
                 "Authorization": "Bearer " + token
             },
-            body: JSON.stringify(obj)
+            body: JSON.stringify(obj)                                                                                                                                                               
         })
         const json = await resp.json();
         if (resp.status != 200 && resp.status != 201) {
